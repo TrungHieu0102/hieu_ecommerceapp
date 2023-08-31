@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@abp/ng.core": "^7.3.2"
+  }
+}
