@@ -10,11 +10,17 @@ const routes: Routes = [
     component: AppLayoutComponent
   },
   {
-    path: 'auth',
+    path: 'product',
    
-    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
+    loadChildren: () => import('./product/product.module').then(m => m.ProductModule),
+    component: AppLayoutComponent
     
   },
+  {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+    
+ }
   // {
   //   path: 'account',
   //   loadChildren: () => import('@abp/ng.account').then(m => m.AccountModule.forLazy()),

@@ -8,64 +8,66 @@ import { LoginRequestDto } from 'src/app/shared/models/login-request.dto';
 import { AuthService } from 'src/app/shared/services/auth.service';
 
 @Component({
-    selector: 'app-login',
-    templateUrl: './login.component.html',
-    styles: [
-      `
-        :host ::ng-deep .p-password input {
-          width: 100%;
-          padding: 1rem;
-        }
-  
-        :host ::ng-deep .pi-eye {
-          transform: scale(1.6);
-          margin-right: 1rem;
-          color: var(--primary-color) !important;
-        }
-  
-        :host ::ng-deep .pi-eye-slash {
-          transform: scale(1.6);
-          margin-right: 1rem;
-          color: var(--primary-color) !important;
-        }
-      `,
-    ],
-  })
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styles: [
+    `
+      :host ::ng-deep .p-password input {
+        width: 100%;
+        padding: 1rem;
+      }
+
+      :host ::ng-deep .pi-eye {
+        transform: scale(1.6);
+        margin-right: 1rem;
+        color: var(--primary-color) !important;
+      }
+
+      :host ::ng-deep .pi-eye-slash {
+        transform: scale(1.6);
+        margin-right: 1rem;
+        color: var(--primary-color) !important;
+      }
+    `,
+  ],
+})
 export class LoginComponent implements OnDestroy {
-    private ngUnsubscripe = new Subject<void>();
-    valCheck: string[] = ['remember'];
-    password!: string;
-    loginForm : FormGroup
+  private ngUnsubscribe = new Subject<void>();
+  valCheck: string[] = ['remember'];
 
-    constructor(public layoutService: LayoutService,
-        private fb: FormBuilder,
-        private authService: AuthService,
-        private router :Router
-        ) {
-        this.loginForm = this.fb.group({
-             username : new FormControl('', Validators.required),
-             password: new FormControl('', Validators.required),
+  password!: string;
 
-        })           
-        
-     }
-   
-     login(){
-        var request : LoginRequestDto = {
-            username: this.loginForm.controls['username'].value,
-            password:this.loginForm.controls['password'].value
-        };
-        this.authService
-        .login(request)
-        .pipe(takeUntil(this.ngUnsubscripe))
-        .subscribe(res=>{
-            localStorage.setItem(ACCESS_TOKEN,res.access_token);
-            localStorage.setItem(REFRESH_TOKEN,res.refresh_token);
-            this.router.navigate(['']);
-        })
-     }
-     ngOnDestroy(): void {
-        this.ngUnsubscripe.next();
-        this.ngUnsubscripe.complete();
-     }
+  loginForm: FormGroup;
+
+  constructor(
+    public layoutService: LayoutService,
+    private fb: FormBuilder,
+    private authService: AuthService,
+    private router: Router
+  ) {
+    this.loginForm = this.fb.group({
+      username: new FormControl('', Validators.required),
+      password: new FormControl('', Validators.required),
+    });
+  }
+
+  login() {
+    var request: LoginRequestDto = {
+      username: this.loginForm.controls['username'].value,
+      password: this.loginForm.controls['password'].value,
+    };
+    this.authService
+      .login(request)
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe(res => {
+        localStorage.setItem(ACCESS_TOKEN, res.access_token);
+        localStorage.setItem(REFRESH_TOKEN, res.refresh_token);
+        this.router.navigate(['']);
+      });
+  }
+
+  ngOnDestroy(): void {
+    this.ngUnsubscribe.next();
+    this.ngUnsubscribe.complete();
+  }
 }
