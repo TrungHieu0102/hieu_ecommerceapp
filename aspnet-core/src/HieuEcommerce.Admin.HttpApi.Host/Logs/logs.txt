@@ -22407,3 +22407,1113 @@ The Keyword field is required. (Keyword)
 2023-09-02 00:42:55.481 +07:00 [INF] Executed endpoint 'HieuEcommerce.Admin.Products.ProductAppService.GetListFilterAsync (HieuEcommerce.Admin.Application)'
 2023-09-02 00:42:55.482 +07:00 [DBG] Added 0 entity changes to the current audit log
 2023-09-02 00:42:55.483 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/app/product/filter?Keyword=r&SkipCount=1&MaxResultCount=1 - - - 200 - application/json;+charset=utf-8 800.9549ms
+2023-09-02 00:54:38.552 +07:00 [INF] Starting HieuEcommerce.Admin.HttpApi.Host.
+2023-09-02 00:54:42.503 +07:00 [INF] Loaded ABP modules:
+2023-09-02 00:54:42.504 +07:00 [INF] - HieuEcommerce.Admin.HieuEcommerceAdminHttpApiHostModule
+2023-09-02 00:54:42.504 +07:00 [INF]   - HieuEcommerce.Admin.HieuEcommerceHttpApiModule
+2023-09-02 00:54:42.504 +07:00 [INF]     - HieuEcommerce.Admin.HieuEcommerceApplicationContractsModule
+2023-09-02 00:54:42.504 +07:00 [INF]       - HieuEcommerce.HieuEcommerceDomainSharedModule
+2023-09-02 00:54:42.504 +07:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2023-09-02 00:54:42.504 +07:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2023-09-02 00:54:42.504 +07:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2023-09-02 00:54:42.504 +07:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2023-09-02 00:54:42.504 +07:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2023-09-02 00:54:42.504 +07:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2023-09-02 00:54:42.504 +07:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2023-09-02 00:54:42.504 +07:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2023-09-02 00:54:42.504 +07:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2023-09-02 00:54:42.504 +07:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2023-09-02 00:54:42.504 +07:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2023-09-02 00:54:42.504 +07:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2023-09-02 00:54:42.504 +07:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2023-09-02 00:54:42.504 +07:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2023-09-02 00:54:42.504 +07:00 [INF]         - Volo.Abp.FeatureManagement.AbpFeatureManagementDomainSharedModule
+2023-09-02 00:54:42.504 +07:00 [INF]           - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2023-09-02 00:54:42.504 +07:00 [INF]             - Volo.Abp.Json.AbpJsonAbstractionsModule
+2023-09-02 00:54:42.504 +07:00 [INF]             - Volo.Abp.Timing.AbpTimingModule
+2023-09-02 00:54:42.504 +07:00 [INF]         - Volo.Abp.Identity.AbpIdentityDomainSharedModule
+2023-09-02 00:54:42.504 +07:00 [INF]           - Volo.Abp.Users.AbpUsersDomainSharedModule
+2023-09-02 00:54:42.504 +07:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2023-09-02 00:54:42.504 +07:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2023-09-02 00:54:42.504 +07:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2023-09-02 00:54:42.504 +07:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2023-09-02 00:54:42.504 +07:00 [INF]         - Volo.Abp.OpenIddict.AbpOpenIddictDomainSharedModule
+2023-09-02 00:54:42.504 +07:00 [INF]         - Volo.Abp.PermissionManagement.AbpPermissionManagementDomainSharedModule
+2023-09-02 00:54:42.504 +07:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2023-09-02 00:54:42.504 +07:00 [INF]         - Volo.Abp.TenantManagement.AbpTenantManagementDomainSharedModule
+2023-09-02 00:54:42.504 +07:00 [INF]       - Volo.Abp.Account.AbpAccountApplicationContractsModule
+2023-09-02 00:54:42.505 +07:00 [INF]         - Volo.Abp.Identity.AbpIdentityApplicationContractsModule
+2023-09-02 00:54:42.505 +07:00 [INF]           - Volo.Abp.Users.AbpUsersAbstractionModule
+2023-09-02 00:54:42.505 +07:00 [INF]             - Volo.Abp.EventBus.AbpEventBusModule
+2023-09-02 00:54:42.505 +07:00 [INF]               - Volo.Abp.Json.AbpJsonModule
+2023-09-02 00:54:42.505 +07:00 [INF]               - Volo.Abp.Guids.AbpGuidsModule
+2023-09-02 00:54:42.505 +07:00 [INF]               - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2023-09-02 00:54:42.505 +07:00 [INF]               - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2023-09-02 00:54:42.505 +07:00 [INF]           - Volo.Abp.Authorization.AbpAuthorizationModule
+2023-09-02 00:54:42.505 +07:00 [INF]           - Volo.Abp.PermissionManagement.AbpPermissionManagementApplicationContractsModule
+2023-09-02 00:54:42.505 +07:00 [INF]             - Volo.Abp.Application.AbpDddApplicationContractsModule
+2023-09-02 00:54:42.505 +07:00 [INF]               - Volo.Abp.Auditing.AbpAuditingContractsModule
+2023-09-02 00:54:42.505 +07:00 [INF]       - Volo.Abp.FeatureManagement.AbpFeatureManagementApplicationContractsModule
+2023-09-02 00:54:42.505 +07:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2023-09-02 00:54:42.505 +07:00 [INF]       - Volo.Abp.TenantManagement.AbpTenantManagementApplicationContractsModule
+2023-09-02 00:54:42.505 +07:00 [INF]     - Volo.Abp.Account.AbpAccountHttpApiModule
+2023-09-02 00:54:42.505 +07:00 [INF]       - Volo.Abp.Identity.AbpIdentityHttpApiModule
+2023-09-02 00:54:42.505 +07:00 [INF]         - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2023-09-02 00:54:42.505 +07:00 [INF]           - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2023-09-02 00:54:42.505 +07:00 [INF]             - Volo.Abp.Auditing.AbpAuditingModule
+2023-09-02 00:54:42.505 +07:00 [INF]             - Volo.Abp.Http.AbpHttpModule
+2023-09-02 00:54:42.505 +07:00 [INF]               - Volo.Abp.Http.AbpHttpAbstractionsModule
+2023-09-02 00:54:42.505 +07:00 [INF]               - Volo.Abp.Minify.AbpMinifyModule
+2023-09-02 00:54:42.505 +07:00 [INF]             - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2023-09-02 00:54:42.505 +07:00 [INF]           - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2023-09-02 00:54:42.505 +07:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2023-09-02 00:54:42.505 +07:00 [INF]           - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2023-09-02 00:54:42.505 +07:00 [INF]             - Volo.Abp.UI.AbpUiModule
+2023-09-02 00:54:42.505 +07:00 [INF]           - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2023-09-02 00:54:42.505 +07:00 [INF]           - Volo.Abp.Application.AbpDddApplicationModule
+2023-09-02 00:54:42.505 +07:00 [INF]             - Volo.Abp.Domain.AbpDddDomainModule
+2023-09-02 00:54:42.505 +07:00 [INF]               - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2023-09-02 00:54:42.505 +07:00 [INF]               - Volo.Abp.Specifications.AbpSpecificationsModule
+2023-09-02 00:54:42.505 +07:00 [INF]               - Volo.Abp.Caching.AbpCachingModule
+2023-09-02 00:54:42.505 +07:00 [INF]                 - Volo.Abp.Serialization.AbpSerializationModule
+2023-09-02 00:54:42.505 +07:00 [INF]               - Volo.Abp.Domain.AbpDddDomainSharedModule
+2023-09-02 00:54:42.505 +07:00 [INF]     - Volo.Abp.PermissionManagement.HttpApi.AbpPermissionManagementHttpApiModule
+2023-09-02 00:54:42.505 +07:00 [INF]     - Volo.Abp.TenantManagement.AbpTenantManagementHttpApiModule
+2023-09-02 00:54:42.505 +07:00 [INF]       - Volo.Abp.FeatureManagement.AbpFeatureManagementHttpApiModule
+2023-09-02 00:54:42.505 +07:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementHttpApiModule
+2023-09-02 00:54:42.505 +07:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2023-09-02 00:54:42.505 +07:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2023-09-02 00:54:42.505 +07:00 [INF]   - Volo.Abp.Caching.StackExchangeRedis.AbpCachingStackExchangeRedisModule
+2023-09-02 00:54:42.505 +07:00 [INF]   - Volo.Abp.DistributedLocking.AbpDistributedLockingModule
+2023-09-02 00:54:42.505 +07:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2023-09-02 00:54:42.505 +07:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2023-09-02 00:54:42.505 +07:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2023-09-02 00:54:42.505 +07:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2023-09-02 00:54:42.505 +07:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2023-09-02 00:54:42.505 +07:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2023-09-02 00:54:42.505 +07:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2023-09-02 00:54:42.505 +07:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2023-09-02 00:54:42.505 +07:00 [INF]     - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2023-09-02 00:54:42.505 +07:00 [INF]   - HieuEcommerce.Admin.HieuEcommerceAdminApplicationModule
+2023-09-02 00:54:42.505 +07:00 [INF]     - HieuEcommerce.HieuEcommerceDomainModule
+2023-09-02 00:54:42.505 +07:00 [INF]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2023-09-02 00:54:42.505 +07:00 [INF]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2023-09-02 00:54:42.505 +07:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2023-09-02 00:54:42.505 +07:00 [INF]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2023-09-02 00:54:42.505 +07:00 [INF]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2023-09-02 00:54:42.505 +07:00 [INF]       - Volo.Abp.FeatureManagement.AbpFeatureManagementDomainModule
+2023-09-02 00:54:42.505 +07:00 [INF]       - Volo.Abp.Identity.AbpIdentityDomainModule
+2023-09-02 00:54:42.505 +07:00 [INF]         - Volo.Abp.Users.AbpUsersDomainModule
+2023-09-02 00:54:42.505 +07:00 [INF]       - Volo.Abp.OpenIddict.AbpOpenIddictDomainModule
+2023-09-02 00:54:42.505 +07:00 [INF]       - Volo.Abp.PermissionManagement.OpenIddict.AbpPermissionManagementDomainOpenIddictModule
+2023-09-02 00:54:42.505 +07:00 [INF]         - Volo.Abp.PermissionManagement.AbpPermissionManagementDomainModule
+2023-09-02 00:54:42.505 +07:00 [INF]       - Volo.Abp.PermissionManagement.Identity.AbpPermissionManagementDomainIdentityModule
+2023-09-02 00:54:42.505 +07:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2023-09-02 00:54:42.505 +07:00 [INF]       - Volo.Abp.TenantManagement.AbpTenantManagementDomainModule
+2023-09-02 00:54:42.505 +07:00 [INF]       - Volo.Abp.Emailing.AbpEmailingModule
+2023-09-02 00:54:42.505 +07:00 [INF]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2023-09-02 00:54:42.505 +07:00 [INF]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2023-09-02 00:54:42.505 +07:00 [INF]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2023-09-02 00:54:42.505 +07:00 [INF]     - Volo.Abp.Account.AbpAccountApplicationModule
+2023-09-02 00:54:42.505 +07:00 [INF]       - Volo.Abp.Identity.AbpIdentityApplicationModule
+2023-09-02 00:54:42.505 +07:00 [INF]         - Volo.Abp.PermissionManagement.AbpPermissionManagementApplicationModule
+2023-09-02 00:54:42.505 +07:00 [INF]     - Volo.Abp.TenantManagement.AbpTenantManagementApplicationModule
+2023-09-02 00:54:42.505 +07:00 [INF]     - Volo.Abp.FeatureManagement.AbpFeatureManagementApplicationModule
+2023-09-02 00:54:42.505 +07:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2023-09-02 00:54:42.505 +07:00 [INF]   - HieuEcommerce.EntityFrameworkCore.HieuEcommerceEntityFrameworkCoreModule
+2023-09-02 00:54:42.505 +07:00 [INF]     - Volo.Abp.Identity.EntityFrameworkCore.AbpIdentityEntityFrameworkCoreModule
+2023-09-02 00:54:42.505 +07:00 [INF]       - Volo.Abp.Users.EntityFrameworkCore.AbpUsersEntityFrameworkCoreModule
+2023-09-02 00:54:42.505 +07:00 [INF]         - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2023-09-02 00:54:42.505 +07:00 [INF]     - Volo.Abp.OpenIddict.EntityFrameworkCore.AbpOpenIddictEntityFrameworkCoreModule
+2023-09-02 00:54:42.505 +07:00 [INF]     - Volo.Abp.PermissionManagement.EntityFrameworkCore.AbpPermissionManagementEntityFrameworkCoreModule
+2023-09-02 00:54:42.505 +07:00 [INF]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2023-09-02 00:54:42.505 +07:00 [INF]     - Volo.Abp.EntityFrameworkCore.SqlServer.AbpEntityFrameworkCoreSqlServerModule
+2023-09-02 00:54:42.505 +07:00 [INF]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2023-09-02 00:54:42.505 +07:00 [INF]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2023-09-02 00:54:42.505 +07:00 [INF]     - Volo.Abp.TenantManagement.EntityFrameworkCore.AbpTenantManagementEntityFrameworkCoreModule
+2023-09-02 00:54:42.505 +07:00 [INF]     - Volo.Abp.FeatureManagement.EntityFrameworkCore.AbpFeatureManagementEntityFrameworkCoreModule
+2023-09-02 00:54:42.505 +07:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2023-09-02 00:54:42.505 +07:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2023-09-02 00:54:42.823 +07:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2023-09-02 00:54:42.846 +07:00 [DBG] Started background worker: Volo.Abp.OpenIddict.Tokens.TokenCleanupBackgroundWorker
+2023-09-02 00:54:43.646 +07:00 [INF] User profile is available. Using 'C:\Users\u\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-02 00:54:43.819 +07:00 [INF] Initialized all ABP modules.
+2023-09-02 00:54:43.954 +07:00 [INF] Now listening on: https://localhost:5001
+2023-09-02 00:54:43.955 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-02 00:54:43.955 +07:00 [INF] Hosting environment: Development
+2023-09-02 00:54:43.955 +07:00 [INF] Content root path: D:\Learning\Bài tập của Khóa học mua\HieuEcommerce\HieuEcommerce\aspnet-core\src\HieuEcommerce.Admin.HttpApi.Host
+2023-09-02 00:54:44.597 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/ - -
+2023-09-02 00:54:45.467 +07:00 [INF] Executing endpoint 'HieuEcommerce.Controllers.HomeController.Index (HieuEcommerce.Admin.HttpApi.Host)'
+2023-09-02 00:54:45.492 +07:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HieuEcommerce.Controllers.HomeController (HieuEcommerce.Admin.HttpApi.Host).
+2023-09-02 00:54:45.520 +07:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2023-09-02 00:54:45.524 +07:00 [INF] Executed action HieuEcommerce.Controllers.HomeController.Index (HieuEcommerce.Admin.HttpApi.Host) in 29.6834ms
+2023-09-02 00:54:45.525 +07:00 [INF] Executed endpoint 'HieuEcommerce.Controllers.HomeController.Index (HieuEcommerce.Admin.HttpApi.Host)'
+2023-09-02 00:54:45.538 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 302 0 - 941.9974ms
+2023-09-02 00:54:45.556 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-09-02 00:54:45.740 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 184.0081ms
+2023-09-02 00:54:45.827 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-09-02 00:54:45.835 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 12034 application/javascript;+charset=utf-8 8.4267ms
+2023-09-02 00:54:45.837 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-09-02 00:54:45.932 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 95.2842ms
+2023-09-02 00:54:46.048 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-09-02 00:54:46.315 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 266.7946ms
+2023-09-02 00:55:26.714 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/abp/application-configuration?includeLocalizationResources=false - -
+2023-09-02 00:55:26.726 +07:00 [INF] CORS policy execution successful.
+2023-09-02 00:55:26.728 +07:00 [INF] Executing endpoint 'Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationConfigurationController.GetAsync (Volo.Abp.AspNetCore.Mvc)'
+2023-09-02 00:55:26.743 +07:00 [INF] Route matched with {area = "abp", action = "Get", controller = "AbpApplicationConfiguration", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.ApplicationConfigurationDto] GetAsync(Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.ApplicationConfigurationRequestOptions) on controller Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationConfigurationController (Volo.Abp.AspNetCore.Mvc).
+2023-09-02 00:55:26.865 +07:00 [DBG] Executing AbpApplicationConfigurationAppService.GetAsync()...
+2023-09-02 00:55:27.295 +07:00 [DBG] Executed AbpApplicationConfigurationAppService.GetAsync().
+2023-09-02 00:55:27.304 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.ApplicationConfigurationDto'.
+2023-09-02 00:55:27.342 +07:00 [INF] Executed action Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationConfigurationController.GetAsync (Volo.Abp.AspNetCore.Mvc) in 598.561ms
+2023-09-02 00:55:27.342 +07:00 [INF] Executed endpoint 'Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationConfigurationController.GetAsync (Volo.Abp.AspNetCore.Mvc)'
+2023-09-02 00:55:27.344 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/abp/application-configuration?includeLocalizationResources=false - - - 200 - application/json;+charset=utf-8 630.3869ms
+2023-09-02 00:55:27.349 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/abp/application-localization?cultureName=fr&onlyDynamics=false - -
+2023-09-02 00:55:27.352 +07:00 [INF] CORS policy execution successful.
+2023-09-02 00:55:27.353 +07:00 [INF] Executing endpoint 'Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationLocalizationController.GetAsync (Volo.Abp.AspNetCore.Mvc)'
+2023-09-02 00:55:27.357 +07:00 [INF] Route matched with {area = "abp", action = "Get", controller = "AbpApplicationLocalization", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.ApplicationLocalizationDto] GetAsync(Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.ApplicationLocalizationRequestDto) on controller Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationLocalizationController (Volo.Abp.AspNetCore.Mvc).
+2023-09-02 00:55:27.425 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.ApplicationLocalizationDto'.
+2023-09-02 00:55:27.432 +07:00 [INF] Executed action Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationLocalizationController.GetAsync (Volo.Abp.AspNetCore.Mvc) in 74.7002ms
+2023-09-02 00:55:27.433 +07:00 [INF] Executed endpoint 'Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationLocalizationController.GetAsync (Volo.Abp.AspNetCore.Mvc)'
+2023-09-02 00:55:27.433 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/abp/application-localization?cultureName=fr&onlyDynamics=false - - - 200 - application/json;+charset=utf-8 84.2822ms
+2023-09-02 00:55:30.115 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/app/product-categories/all - -
+2023-09-02 00:55:30.115 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/app/product/filter?skipCount=0&maxResultCount=10 - -
+2023-09-02 00:55:30.116 +07:00 [INF] CORS policy execution successful.
+2023-09-02 00:55:30.116 +07:00 [INF] CORS policy execution successful.
+2023-09-02 00:55:30.117 +07:00 [INF] Executing endpoint 'HieuEcommerce.Admin.Products.ProductAppService.GetListFilterAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 00:55:30.118 +07:00 [INF] Executing endpoint 'HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService.GetListAllAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 00:55:30.121 +07:00 [INF] Route matched with {action = "GetListAll", controller = "ProductCategories", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[HieuEcommerce.Admin.ProductCategories.ProductCategoryInListDto]] GetListAllAsync() on controller HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService (HieuEcommerce.Admin.Application).
+2023-09-02 00:55:30.125 +07:00 [INF] Route matched with {action = "GetListFilter", controller = "Product", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.Application.Dtos.PagedResultDto`1[HieuEcommerce.Admin.Products.ProductInListDto]] GetListFilterAsync(HieuEcommerce.Admin.Products.ProductListFilterDto) on controller HieuEcommerce.Admin.Products.ProductAppService (HieuEcommerce.Admin.Application).
+2023-09-02 00:55:30.449 +07:00 [WRN] ---------- RemoteServiceErrorInfo ----------
+{
+  "code": null,
+  "message": "Votre demande n'est pas valide!",
+  "details": "Les erreurs suivantes ont été détectées lors de la validation.\r\n - The Keyword field is required.\r\n",
+  "data": {},
+  "validationErrors": [
+    {
+      "message": "The Keyword field is required.",
+      "members": [
+        "keyword"
+      ]
+    }
+  ]
+}
+
+2023-09-02 00:55:30.450 +07:00 [WRN] ModelState is not valid! See ValidationErrors for details.
+Volo.Abp.Validation.AbpValidationException: ModelState is not valid! See ValidationErrors for details.
+   at Volo.Abp.AspNetCore.Mvc.Validation.ModelStateValidator.Validate(ModelStateDictionary modelState)
+   at Volo.Abp.AspNetCore.Mvc.Validation.AbpValidationActionFilter.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2023-09-02 00:55:30.451 +07:00 [WRN] There are 1 validation errors:
+The Keyword field is required. (Keyword)
+
+2023-09-02 00:55:30.496 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Http.RemoteServiceErrorResponse'.
+2023-09-02 00:55:30.498 +07:00 [INF] Executed action HieuEcommerce.Admin.Products.ProductAppService.GetListFilterAsync (HieuEcommerce.Admin.Application) in 372.7173ms
+2023-09-02 00:55:30.498 +07:00 [INF] Executed endpoint 'HieuEcommerce.Admin.Products.ProductAppService.GetListFilterAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 00:55:31.018 +07:00 [WRN] No store type was specified for the decimal property 'Value' on entity type 'ProductAttributeDecimal'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-09-02 00:55:31.420 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 00:55:31.420 +07:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HieuEcommerce.Admin.ProductCategories.ProductCategoryInListDto, HieuEcommerce.Admin.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-02 00:55:31.422 +07:00 [INF] Executed action HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService.GetListAllAsync (HieuEcommerce.Admin.Application) in 1301.217ms
+2023-09-02 00:55:31.422 +07:00 [INF] Executed endpoint 'HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService.GetListAllAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 00:55:31.422 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 00:55:31.423 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/app/product-categories/all - - - 200 - application/json;+charset=utf-8 1307.5256ms
+2023-09-02 00:55:31.705 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 00:55:31.716 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 00:55:31.717 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/app/product/filter?skipCount=0&maxResultCount=10 - - - 400 - application/json;+charset=utf-8 1601.9603ms
+2023-09-02 00:55:33.928 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/app/product/filter?skipCount=0&maxResultCount=10 - -
+2023-09-02 00:55:33.930 +07:00 [INF] CORS policy execution successful.
+2023-09-02 00:55:33.931 +07:00 [INF] Executing endpoint 'HieuEcommerce.Admin.Products.ProductAppService.GetListFilterAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 00:55:33.931 +07:00 [INF] Route matched with {action = "GetListFilter", controller = "Product", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.Application.Dtos.PagedResultDto`1[HieuEcommerce.Admin.Products.ProductInListDto]] GetListFilterAsync(HieuEcommerce.Admin.Products.ProductListFilterDto) on controller HieuEcommerce.Admin.Products.ProductAppService (HieuEcommerce.Admin.Application).
+2023-09-02 00:55:33.934 +07:00 [WRN] ---------- RemoteServiceErrorInfo ----------
+{
+  "code": null,
+  "message": "Votre demande n'est pas valide!",
+  "details": "Les erreurs suivantes ont été détectées lors de la validation.\r\n - The Keyword field is required.\r\n",
+  "data": {},
+  "validationErrors": [
+    {
+      "message": "The Keyword field is required.",
+      "members": [
+        "keyword"
+      ]
+    }
+  ]
+}
+
+2023-09-02 00:55:33.934 +07:00 [WRN] ModelState is not valid! See ValidationErrors for details.
+Volo.Abp.Validation.AbpValidationException: ModelState is not valid! See ValidationErrors for details.
+   at Volo.Abp.AspNetCore.Mvc.Validation.ModelStateValidator.Validate(ModelStateDictionary modelState)
+   at Volo.Abp.AspNetCore.Mvc.Validation.AbpValidationActionFilter.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2023-09-02 00:55:33.934 +07:00 [WRN] There are 1 validation errors:
+The Keyword field is required. (Keyword)
+
+2023-09-02 00:55:33.934 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Http.RemoteServiceErrorResponse'.
+2023-09-02 00:55:33.935 +07:00 [INF] Executed action HieuEcommerce.Admin.Products.ProductAppService.GetListFilterAsync (HieuEcommerce.Admin.Application) in 3.3039ms
+2023-09-02 00:55:33.935 +07:00 [INF] Executed endpoint 'HieuEcommerce.Admin.Products.ProductAppService.GetListFilterAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 00:55:33.944 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 00:55:33.945 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 00:55:33.946 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/app/product/filter?skipCount=0&maxResultCount=10 - - - 400 - application/json;+charset=utf-8 17.1676ms
+2023-09-02 00:55:39.969 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/app/product/filter?skipCount=0&maxResultCount=10 - -
+2023-09-02 00:55:39.969 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/app/product-categories/all - -
+2023-09-02 00:55:39.969 +07:00 [INF] CORS policy execution successful.
+2023-09-02 00:55:39.970 +07:00 [INF] CORS policy execution successful.
+2023-09-02 00:55:39.971 +07:00 [INF] Executing endpoint 'HieuEcommerce.Admin.Products.ProductAppService.GetListFilterAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 00:55:39.971 +07:00 [INF] Route matched with {action = "GetListFilter", controller = "Product", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.Application.Dtos.PagedResultDto`1[HieuEcommerce.Admin.Products.ProductInListDto]] GetListFilterAsync(HieuEcommerce.Admin.Products.ProductListFilterDto) on controller HieuEcommerce.Admin.Products.ProductAppService (HieuEcommerce.Admin.Application).
+2023-09-02 00:55:39.971 +07:00 [INF] Executing endpoint 'HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService.GetListAllAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 00:55:39.972 +07:00 [INF] Route matched with {action = "GetListAll", controller = "ProductCategories", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[HieuEcommerce.Admin.ProductCategories.ProductCategoryInListDto]] GetListAllAsync() on controller HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService (HieuEcommerce.Admin.Application).
+2023-09-02 00:55:39.973 +07:00 [WRN] ---------- RemoteServiceErrorInfo ----------
+{
+  "code": null,
+  "message": "Votre demande n'est pas valide!",
+  "details": "Les erreurs suivantes ont été détectées lors de la validation.\r\n - The Keyword field is required.\r\n",
+  "data": {},
+  "validationErrors": [
+    {
+      "message": "The Keyword field is required.",
+      "members": [
+        "keyword"
+      ]
+    }
+  ]
+}
+
+2023-09-02 00:55:39.973 +07:00 [WRN] ModelState is not valid! See ValidationErrors for details.
+Volo.Abp.Validation.AbpValidationException: ModelState is not valid! See ValidationErrors for details.
+   at Volo.Abp.AspNetCore.Mvc.Validation.ModelStateValidator.Validate(ModelStateDictionary modelState)
+   at Volo.Abp.AspNetCore.Mvc.Validation.AbpValidationActionFilter.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2023-09-02 00:55:39.973 +07:00 [WRN] There are 1 validation errors:
+The Keyword field is required. (Keyword)
+
+2023-09-02 00:55:39.973 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Http.RemoteServiceErrorResponse'.
+2023-09-02 00:55:39.973 +07:00 [INF] Executed action HieuEcommerce.Admin.Products.ProductAppService.GetListFilterAsync (HieuEcommerce.Admin.Application) in 2.6705ms
+2023-09-02 00:55:39.973 +07:00 [INF] Executed endpoint 'HieuEcommerce.Admin.Products.ProductAppService.GetListFilterAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 00:55:39.981 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 00:55:39.981 +07:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HieuEcommerce.Admin.ProductCategories.ProductCategoryInListDto, HieuEcommerce.Admin.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-02 00:55:39.982 +07:00 [INF] Executed action HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService.GetListAllAsync (HieuEcommerce.Admin.Application) in 9.9021ms
+2023-09-02 00:55:39.982 +07:00 [INF] Executed endpoint 'HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService.GetListAllAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 00:55:39.982 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 00:55:39.984 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/app/product-categories/all - - - 200 - application/json;+charset=utf-8 14.3339ms
+2023-09-02 00:55:39.994 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 00:55:39.995 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 00:55:39.995 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/app/product/filter?skipCount=0&maxResultCount=10 - - - 400 - application/json;+charset=utf-8 25.8412ms
+2023-09-02 00:55:42.992 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/app/product-categories/all - -
+2023-09-02 00:55:42.992 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/app/product/filter?skipCount=0&maxResultCount=10 - -
+2023-09-02 00:55:42.992 +07:00 [INF] CORS policy execution successful.
+2023-09-02 00:55:42.992 +07:00 [INF] CORS policy execution successful.
+2023-09-02 00:55:42.993 +07:00 [INF] Executing endpoint 'HieuEcommerce.Admin.Products.ProductAppService.GetListFilterAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 00:55:42.993 +07:00 [INF] Executing endpoint 'HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService.GetListAllAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 00:55:42.993 +07:00 [INF] Route matched with {action = "GetListFilter", controller = "Product", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.Application.Dtos.PagedResultDto`1[HieuEcommerce.Admin.Products.ProductInListDto]] GetListFilterAsync(HieuEcommerce.Admin.Products.ProductListFilterDto) on controller HieuEcommerce.Admin.Products.ProductAppService (HieuEcommerce.Admin.Application).
+2023-09-02 00:55:42.993 +07:00 [INF] Route matched with {action = "GetListAll", controller = "ProductCategories", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[HieuEcommerce.Admin.ProductCategories.ProductCategoryInListDto]] GetListAllAsync() on controller HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService (HieuEcommerce.Admin.Application).
+2023-09-02 00:55:42.995 +07:00 [WRN] ---------- RemoteServiceErrorInfo ----------
+{
+  "code": null,
+  "message": "Votre demande n'est pas valide!",
+  "details": "Les erreurs suivantes ont été détectées lors de la validation.\r\n - The Keyword field is required.\r\n",
+  "data": {},
+  "validationErrors": [
+    {
+      "message": "The Keyword field is required.",
+      "members": [
+        "keyword"
+      ]
+    }
+  ]
+}
+
+2023-09-02 00:55:42.995 +07:00 [WRN] ModelState is not valid! See ValidationErrors for details.
+Volo.Abp.Validation.AbpValidationException: ModelState is not valid! See ValidationErrors for details.
+   at Volo.Abp.AspNetCore.Mvc.Validation.ModelStateValidator.Validate(ModelStateDictionary modelState)
+   at Volo.Abp.AspNetCore.Mvc.Validation.AbpValidationActionFilter.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2023-09-02 00:55:42.995 +07:00 [WRN] There are 1 validation errors:
+The Keyword field is required. (Keyword)
+
+2023-09-02 00:55:42.995 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Http.RemoteServiceErrorResponse'.
+2023-09-02 00:55:42.996 +07:00 [INF] Executed action HieuEcommerce.Admin.Products.ProductAppService.GetListFilterAsync (HieuEcommerce.Admin.Application) in 2.4981ms
+2023-09-02 00:55:42.996 +07:00 [INF] Executed endpoint 'HieuEcommerce.Admin.Products.ProductAppService.GetListFilterAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 00:55:43.001 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 00:55:43.001 +07:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HieuEcommerce.Admin.ProductCategories.ProductCategoryInListDto, HieuEcommerce.Admin.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-02 00:55:43.001 +07:00 [INF] Executed action HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService.GetListAllAsync (HieuEcommerce.Admin.Application) in 8.051ms
+2023-09-02 00:55:43.001 +07:00 [INF] Executed endpoint 'HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService.GetListAllAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 00:55:43.001 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 00:55:43.002 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/app/product-categories/all - - - 200 - application/json;+charset=utf-8 9.9707ms
+2023-09-02 00:55:43.016 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 00:55:43.016 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 00:55:43.017 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/app/product/filter?skipCount=0&maxResultCount=10 - - - 400 - application/json;+charset=utf-8 24.4900ms
+2023-09-02 00:55:45.805 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/app/product/filter?skipCount=0&maxResultCount=10 - -
+2023-09-02 00:55:45.805 +07:00 [INF] CORS policy execution successful.
+2023-09-02 00:55:45.806 +07:00 [INF] Executing endpoint 'HieuEcommerce.Admin.Products.ProductAppService.GetListFilterAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 00:55:45.806 +07:00 [INF] Route matched with {action = "GetListFilter", controller = "Product", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.Application.Dtos.PagedResultDto`1[HieuEcommerce.Admin.Products.ProductInListDto]] GetListFilterAsync(HieuEcommerce.Admin.Products.ProductListFilterDto) on controller HieuEcommerce.Admin.Products.ProductAppService (HieuEcommerce.Admin.Application).
+2023-09-02 00:55:45.809 +07:00 [WRN] ---------- RemoteServiceErrorInfo ----------
+{
+  "code": null,
+  "message": "Votre demande n'est pas valide!",
+  "details": "Les erreurs suivantes ont été détectées lors de la validation.\r\n - The Keyword field is required.\r\n",
+  "data": {},
+  "validationErrors": [
+    {
+      "message": "The Keyword field is required.",
+      "members": [
+        "keyword"
+      ]
+    }
+  ]
+}
+
+2023-09-02 00:55:45.809 +07:00 [WRN] ModelState is not valid! See ValidationErrors for details.
+Volo.Abp.Validation.AbpValidationException: ModelState is not valid! See ValidationErrors for details.
+   at Volo.Abp.AspNetCore.Mvc.Validation.ModelStateValidator.Validate(ModelStateDictionary modelState)
+   at Volo.Abp.AspNetCore.Mvc.Validation.AbpValidationActionFilter.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2023-09-02 00:55:45.809 +07:00 [WRN] There are 1 validation errors:
+The Keyword field is required. (Keyword)
+
+2023-09-02 00:55:45.809 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Http.RemoteServiceErrorResponse'.
+2023-09-02 00:55:45.809 +07:00 [INF] Executed action HieuEcommerce.Admin.Products.ProductAppService.GetListFilterAsync (HieuEcommerce.Admin.Application) in 2.6422ms
+2023-09-02 00:55:45.809 +07:00 [INF] Executed endpoint 'HieuEcommerce.Admin.Products.ProductAppService.GetListFilterAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 00:55:45.815 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 00:55:45.815 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 00:55:45.816 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/app/product/filter?skipCount=0&maxResultCount=10 - - - 400 - application/json;+charset=utf-8 10.6268ms
+2023-09-02 01:09:12.423 +07:00 [INF] Starting HieuEcommerce.Admin.HttpApi.Host.
+2023-09-02 01:09:15.884 +07:00 [INF] Loaded ABP modules:
+2023-09-02 01:09:15.885 +07:00 [INF] - HieuEcommerce.Admin.HieuEcommerceAdminHttpApiHostModule
+2023-09-02 01:09:15.885 +07:00 [INF]   - HieuEcommerce.Admin.HieuEcommerceHttpApiModule
+2023-09-02 01:09:15.885 +07:00 [INF]     - HieuEcommerce.Admin.HieuEcommerceApplicationContractsModule
+2023-09-02 01:09:15.885 +07:00 [INF]       - HieuEcommerce.HieuEcommerceDomainSharedModule
+2023-09-02 01:09:15.885 +07:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2023-09-02 01:09:15.885 +07:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2023-09-02 01:09:15.885 +07:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2023-09-02 01:09:15.885 +07:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2023-09-02 01:09:15.885 +07:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2023-09-02 01:09:15.885 +07:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2023-09-02 01:09:15.885 +07:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2023-09-02 01:09:15.885 +07:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2023-09-02 01:09:15.885 +07:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2023-09-02 01:09:15.885 +07:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2023-09-02 01:09:15.885 +07:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2023-09-02 01:09:15.885 +07:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2023-09-02 01:09:15.885 +07:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2023-09-02 01:09:15.885 +07:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2023-09-02 01:09:15.885 +07:00 [INF]         - Volo.Abp.FeatureManagement.AbpFeatureManagementDomainSharedModule
+2023-09-02 01:09:15.885 +07:00 [INF]           - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2023-09-02 01:09:15.885 +07:00 [INF]             - Volo.Abp.Json.AbpJsonAbstractionsModule
+2023-09-02 01:09:15.885 +07:00 [INF]             - Volo.Abp.Timing.AbpTimingModule
+2023-09-02 01:09:15.885 +07:00 [INF]         - Volo.Abp.Identity.AbpIdentityDomainSharedModule
+2023-09-02 01:09:15.885 +07:00 [INF]           - Volo.Abp.Users.AbpUsersDomainSharedModule
+2023-09-02 01:09:15.885 +07:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2023-09-02 01:09:15.885 +07:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2023-09-02 01:09:15.885 +07:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2023-09-02 01:09:15.885 +07:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2023-09-02 01:09:15.885 +07:00 [INF]         - Volo.Abp.OpenIddict.AbpOpenIddictDomainSharedModule
+2023-09-02 01:09:15.885 +07:00 [INF]         - Volo.Abp.PermissionManagement.AbpPermissionManagementDomainSharedModule
+2023-09-02 01:09:15.885 +07:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2023-09-02 01:09:15.885 +07:00 [INF]         - Volo.Abp.TenantManagement.AbpTenantManagementDomainSharedModule
+2023-09-02 01:09:15.885 +07:00 [INF]       - Volo.Abp.Account.AbpAccountApplicationContractsModule
+2023-09-02 01:09:15.885 +07:00 [INF]         - Volo.Abp.Identity.AbpIdentityApplicationContractsModule
+2023-09-02 01:09:15.885 +07:00 [INF]           - Volo.Abp.Users.AbpUsersAbstractionModule
+2023-09-02 01:09:15.885 +07:00 [INF]             - Volo.Abp.EventBus.AbpEventBusModule
+2023-09-02 01:09:15.885 +07:00 [INF]               - Volo.Abp.Json.AbpJsonModule
+2023-09-02 01:09:15.885 +07:00 [INF]               - Volo.Abp.Guids.AbpGuidsModule
+2023-09-02 01:09:15.885 +07:00 [INF]               - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2023-09-02 01:09:15.885 +07:00 [INF]               - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2023-09-02 01:09:15.885 +07:00 [INF]           - Volo.Abp.Authorization.AbpAuthorizationModule
+2023-09-02 01:09:15.885 +07:00 [INF]           - Volo.Abp.PermissionManagement.AbpPermissionManagementApplicationContractsModule
+2023-09-02 01:09:15.885 +07:00 [INF]             - Volo.Abp.Application.AbpDddApplicationContractsModule
+2023-09-02 01:09:15.885 +07:00 [INF]               - Volo.Abp.Auditing.AbpAuditingContractsModule
+2023-09-02 01:09:15.885 +07:00 [INF]       - Volo.Abp.FeatureManagement.AbpFeatureManagementApplicationContractsModule
+2023-09-02 01:09:15.885 +07:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2023-09-02 01:09:15.885 +07:00 [INF]       - Volo.Abp.TenantManagement.AbpTenantManagementApplicationContractsModule
+2023-09-02 01:09:15.885 +07:00 [INF]     - Volo.Abp.Account.AbpAccountHttpApiModule
+2023-09-02 01:09:15.885 +07:00 [INF]       - Volo.Abp.Identity.AbpIdentityHttpApiModule
+2023-09-02 01:09:15.886 +07:00 [INF]         - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2023-09-02 01:09:15.886 +07:00 [INF]           - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2023-09-02 01:09:15.886 +07:00 [INF]             - Volo.Abp.Auditing.AbpAuditingModule
+2023-09-02 01:09:15.886 +07:00 [INF]             - Volo.Abp.Http.AbpHttpModule
+2023-09-02 01:09:15.886 +07:00 [INF]               - Volo.Abp.Http.AbpHttpAbstractionsModule
+2023-09-02 01:09:15.886 +07:00 [INF]               - Volo.Abp.Minify.AbpMinifyModule
+2023-09-02 01:09:15.886 +07:00 [INF]             - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2023-09-02 01:09:15.886 +07:00 [INF]           - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2023-09-02 01:09:15.886 +07:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2023-09-02 01:09:15.886 +07:00 [INF]           - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2023-09-02 01:09:15.886 +07:00 [INF]             - Volo.Abp.UI.AbpUiModule
+2023-09-02 01:09:15.886 +07:00 [INF]           - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2023-09-02 01:09:15.886 +07:00 [INF]           - Volo.Abp.Application.AbpDddApplicationModule
+2023-09-02 01:09:15.886 +07:00 [INF]             - Volo.Abp.Domain.AbpDddDomainModule
+2023-09-02 01:09:15.886 +07:00 [INF]               - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2023-09-02 01:09:15.886 +07:00 [INF]               - Volo.Abp.Specifications.AbpSpecificationsModule
+2023-09-02 01:09:15.886 +07:00 [INF]               - Volo.Abp.Caching.AbpCachingModule
+2023-09-02 01:09:15.886 +07:00 [INF]                 - Volo.Abp.Serialization.AbpSerializationModule
+2023-09-02 01:09:15.886 +07:00 [INF]               - Volo.Abp.Domain.AbpDddDomainSharedModule
+2023-09-02 01:09:15.886 +07:00 [INF]     - Volo.Abp.PermissionManagement.HttpApi.AbpPermissionManagementHttpApiModule
+2023-09-02 01:09:15.886 +07:00 [INF]     - Volo.Abp.TenantManagement.AbpTenantManagementHttpApiModule
+2023-09-02 01:09:15.886 +07:00 [INF]       - Volo.Abp.FeatureManagement.AbpFeatureManagementHttpApiModule
+2023-09-02 01:09:15.886 +07:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementHttpApiModule
+2023-09-02 01:09:15.886 +07:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2023-09-02 01:09:15.886 +07:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2023-09-02 01:09:15.886 +07:00 [INF]   - Volo.Abp.Caching.StackExchangeRedis.AbpCachingStackExchangeRedisModule
+2023-09-02 01:09:15.886 +07:00 [INF]   - Volo.Abp.DistributedLocking.AbpDistributedLockingModule
+2023-09-02 01:09:15.886 +07:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2023-09-02 01:09:15.886 +07:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2023-09-02 01:09:15.886 +07:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2023-09-02 01:09:15.886 +07:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2023-09-02 01:09:15.886 +07:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2023-09-02 01:09:15.886 +07:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2023-09-02 01:09:15.886 +07:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2023-09-02 01:09:15.886 +07:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2023-09-02 01:09:15.886 +07:00 [INF]     - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2023-09-02 01:09:15.886 +07:00 [INF]   - HieuEcommerce.Admin.HieuEcommerceAdminApplicationModule
+2023-09-02 01:09:15.886 +07:00 [INF]     - HieuEcommerce.HieuEcommerceDomainModule
+2023-09-02 01:09:15.886 +07:00 [INF]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2023-09-02 01:09:15.886 +07:00 [INF]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2023-09-02 01:09:15.886 +07:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2023-09-02 01:09:15.886 +07:00 [INF]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2023-09-02 01:09:15.886 +07:00 [INF]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2023-09-02 01:09:15.886 +07:00 [INF]       - Volo.Abp.FeatureManagement.AbpFeatureManagementDomainModule
+2023-09-02 01:09:15.886 +07:00 [INF]       - Volo.Abp.Identity.AbpIdentityDomainModule
+2023-09-02 01:09:15.886 +07:00 [INF]         - Volo.Abp.Users.AbpUsersDomainModule
+2023-09-02 01:09:15.886 +07:00 [INF]       - Volo.Abp.OpenIddict.AbpOpenIddictDomainModule
+2023-09-02 01:09:15.886 +07:00 [INF]       - Volo.Abp.PermissionManagement.OpenIddict.AbpPermissionManagementDomainOpenIddictModule
+2023-09-02 01:09:15.886 +07:00 [INF]         - Volo.Abp.PermissionManagement.AbpPermissionManagementDomainModule
+2023-09-02 01:09:15.886 +07:00 [INF]       - Volo.Abp.PermissionManagement.Identity.AbpPermissionManagementDomainIdentityModule
+2023-09-02 01:09:15.886 +07:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2023-09-02 01:09:15.886 +07:00 [INF]       - Volo.Abp.TenantManagement.AbpTenantManagementDomainModule
+2023-09-02 01:09:15.886 +07:00 [INF]       - Volo.Abp.Emailing.AbpEmailingModule
+2023-09-02 01:09:15.886 +07:00 [INF]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2023-09-02 01:09:15.886 +07:00 [INF]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2023-09-02 01:09:15.886 +07:00 [INF]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2023-09-02 01:09:15.886 +07:00 [INF]     - Volo.Abp.Account.AbpAccountApplicationModule
+2023-09-02 01:09:15.886 +07:00 [INF]       - Volo.Abp.Identity.AbpIdentityApplicationModule
+2023-09-02 01:09:15.886 +07:00 [INF]         - Volo.Abp.PermissionManagement.AbpPermissionManagementApplicationModule
+2023-09-02 01:09:15.886 +07:00 [INF]     - Volo.Abp.TenantManagement.AbpTenantManagementApplicationModule
+2023-09-02 01:09:15.886 +07:00 [INF]     - Volo.Abp.FeatureManagement.AbpFeatureManagementApplicationModule
+2023-09-02 01:09:15.886 +07:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2023-09-02 01:09:15.886 +07:00 [INF]   - HieuEcommerce.EntityFrameworkCore.HieuEcommerceEntityFrameworkCoreModule
+2023-09-02 01:09:15.886 +07:00 [INF]     - Volo.Abp.Identity.EntityFrameworkCore.AbpIdentityEntityFrameworkCoreModule
+2023-09-02 01:09:15.886 +07:00 [INF]       - Volo.Abp.Users.EntityFrameworkCore.AbpUsersEntityFrameworkCoreModule
+2023-09-02 01:09:15.886 +07:00 [INF]         - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2023-09-02 01:09:15.886 +07:00 [INF]     - Volo.Abp.OpenIddict.EntityFrameworkCore.AbpOpenIddictEntityFrameworkCoreModule
+2023-09-02 01:09:15.886 +07:00 [INF]     - Volo.Abp.PermissionManagement.EntityFrameworkCore.AbpPermissionManagementEntityFrameworkCoreModule
+2023-09-02 01:09:15.886 +07:00 [INF]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2023-09-02 01:09:15.886 +07:00 [INF]     - Volo.Abp.EntityFrameworkCore.SqlServer.AbpEntityFrameworkCoreSqlServerModule
+2023-09-02 01:09:15.886 +07:00 [INF]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2023-09-02 01:09:15.886 +07:00 [INF]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2023-09-02 01:09:15.886 +07:00 [INF]     - Volo.Abp.TenantManagement.EntityFrameworkCore.AbpTenantManagementEntityFrameworkCoreModule
+2023-09-02 01:09:15.886 +07:00 [INF]     - Volo.Abp.FeatureManagement.EntityFrameworkCore.AbpFeatureManagementEntityFrameworkCoreModule
+2023-09-02 01:09:15.886 +07:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2023-09-02 01:09:15.886 +07:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2023-09-02 01:09:16.243 +07:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2023-09-02 01:09:16.271 +07:00 [DBG] Started background worker: Volo.Abp.OpenIddict.Tokens.TokenCleanupBackgroundWorker
+2023-09-02 01:09:17.141 +07:00 [INF] User profile is available. Using 'C:\Users\u\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-02 01:09:17.337 +07:00 [INF] Initialized all ABP modules.
+2023-09-02 01:09:17.499 +07:00 [INF] Now listening on: https://localhost:5001
+2023-09-02 01:09:17.499 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-02 01:09:17.500 +07:00 [INF] Hosting environment: Development
+2023-09-02 01:09:17.500 +07:00 [INF] Content root path: D:\Learning\Bài tập của Khóa học mua\HieuEcommerce\HieuEcommerce\aspnet-core\src\HieuEcommerce.Admin.HttpApi.Host
+2023-09-02 01:09:18.234 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/ - -
+2023-09-02 01:09:19.250 +07:00 [INF] Executing endpoint 'HieuEcommerce.Controllers.HomeController.Index (HieuEcommerce.Admin.HttpApi.Host)'
+2023-09-02 01:09:19.276 +07:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HieuEcommerce.Controllers.HomeController (HieuEcommerce.Admin.HttpApi.Host).
+2023-09-02 01:09:19.303 +07:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2023-09-02 01:09:19.308 +07:00 [INF] Executed action HieuEcommerce.Controllers.HomeController.Index (HieuEcommerce.Admin.HttpApi.Host) in 27.9571ms
+2023-09-02 01:09:19.308 +07:00 [INF] Executed endpoint 'HieuEcommerce.Controllers.HomeController.Index (HieuEcommerce.Admin.HttpApi.Host)'
+2023-09-02 01:09:19.323 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 302 0 - 1091.4782ms
+2023-09-02 01:09:19.339 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-09-02 01:09:19.491 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 151.9937ms
+2023-09-02 01:09:19.551 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-09-02 01:09:19.558 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 12034 application/javascript;+charset=utf-8 6.8349ms
+2023-09-02 01:09:19.559 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-09-02 01:09:19.608 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 49.0645ms
+2023-09-02 01:09:19.743 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-09-02 01:09:19.976 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 233.6896ms
+2023-09-02 01:10:16.476 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/abp/Swashbuckle/SetCsrfCookie application/json -
+2023-09-02 01:10:16.480 +07:00 [INF] Executing endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2023-09-02 01:10:16.482 +07:00 [INF] Route matched with {area = "Abp", action = "SetCsrfCookie", controller = "AbpSwashbuckle", page = ""}. Executing controller action with signature Void SetCsrfCookie() on controller Volo.Abp.Swashbuckle.AbpSwashbuckleController (Volo.Abp.Swashbuckle).
+2023-09-02 01:10:16.496 +07:00 [INF] Executed action Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle) in 13.9393ms
+2023-09-02 01:10:16.496 +07:00 [INF] Executed endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2023-09-02 01:10:16.496 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/abp/Swashbuckle/SetCsrfCookie application/json - - 204 - - 20.3884ms
+2023-09-02 01:10:16.616 +07:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/app/product-categories application/json 238
+2023-09-02 01:10:16.621 +07:00 [INF] CORS policy execution failed.
+2023-09-02 01:10:16.622 +07:00 [INF] Request origin https://localhost:5001 does not have permission to access the resource.
+2023-09-02 01:10:16.625 +07:00 [INF] Executing endpoint 'HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService.CreateAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 01:10:16.635 +07:00 [INF] Route matched with {action = "Create", controller = "ProductCategories", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HieuEcommerce.Admin.ProductCategories.ProductCategoryDto] CreateAsync(HieuEcommerce.Admin.ProductCategories.CreateUpdateProductCategoryDto) on controller HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService (HieuEcommerce.Admin.Application).
+2023-09-02 01:10:17.570 +07:00 [WRN] No store type was specified for the decimal property 'Value' on entity type 'ProductAttributeDecimal'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-09-02 01:10:18.153 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 01:10:18.172 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 01:10:18.178 +07:00 [INF] Executing ObjectResult, writing value of type 'HieuEcommerce.Admin.ProductCategories.ProductCategoryDto'.
+2023-09-02 01:10:18.187 +07:00 [INF] Executed action HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService.CreateAsync (HieuEcommerce.Admin.Application) in 1551.9436ms
+2023-09-02 01:10:18.187 +07:00 [INF] Executed endpoint 'HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService.CreateAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 01:10:18.188 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 01:10:18.199 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 01:10:18.408 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 01:10:18.410 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 01:10:18.411 +07:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/app/product-categories application/json 238 - 200 - application/json;+charset=utf-8 1795.4660ms
+2023-09-02 01:11:33.973 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/app/product-categories application/json 248
+2023-09-02 01:11:33.977 +07:00 [INF] Executing endpoint 'HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService.CreateAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 01:11:33.977 +07:00 [INF] Route matched with {action = "Create", controller = "ProductCategories", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HieuEcommerce.Admin.ProductCategories.ProductCategoryDto] CreateAsync(HieuEcommerce.Admin.ProductCategories.CreateUpdateProductCategoryDto) on controller HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService (HieuEcommerce.Admin.Application).
+2023-09-02 01:11:33.996 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 01:11:33.998 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 01:11:33.998 +07:00 [INF] Executing ObjectResult, writing value of type 'HieuEcommerce.Admin.ProductCategories.ProductCategoryDto'.
+2023-09-02 01:11:34.000 +07:00 [INF] Executed action HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService.CreateAsync (HieuEcommerce.Admin.Application) in 23.5879ms
+2023-09-02 01:11:34.001 +07:00 [INF] Executed endpoint 'HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService.CreateAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 01:11:34.001 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 01:11:34.001 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 01:11:34.031 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 01:11:34.031 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 01:11:34.032 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/app/product-categories application/json 248 - 200 - application/json;+charset=utf-8 59.0902ms
+2023-09-02 01:12:15.153 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/app/product-categories application/json 243
+2023-09-02 01:12:15.155 +07:00 [INF] Executing endpoint 'HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService.CreateAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 01:12:15.155 +07:00 [INF] Route matched with {action = "Create", controller = "ProductCategories", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HieuEcommerce.Admin.ProductCategories.ProductCategoryDto] CreateAsync(HieuEcommerce.Admin.ProductCategories.CreateUpdateProductCategoryDto) on controller HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService (HieuEcommerce.Admin.Application).
+2023-09-02 01:12:15.185 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 01:12:15.186 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 01:12:15.187 +07:00 [INF] Executing ObjectResult, writing value of type 'HieuEcommerce.Admin.ProductCategories.ProductCategoryDto'.
+2023-09-02 01:12:15.187 +07:00 [INF] Executed action HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService.CreateAsync (HieuEcommerce.Admin.Application) in 31.8212ms
+2023-09-02 01:12:15.187 +07:00 [INF] Executed endpoint 'HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService.CreateAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 01:12:15.187 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 01:12:15.187 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 01:12:15.200 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 01:12:15.200 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 01:12:15.201 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/app/product-categories application/json 243 - 200 - application/json;+charset=utf-8 47.3999ms
+2023-09-02 01:13:42.749 +07:00 [INF] Starting HieuEcommerce.Admin.HttpApi.Host.
+2023-09-02 01:13:46.933 +07:00 [INF] Loaded ABP modules:
+2023-09-02 01:13:46.934 +07:00 [INF] - HieuEcommerce.Admin.HieuEcommerceAdminHttpApiHostModule
+2023-09-02 01:13:46.934 +07:00 [INF]   - HieuEcommerce.Admin.HieuEcommerceHttpApiModule
+2023-09-02 01:13:46.934 +07:00 [INF]     - HieuEcommerce.Admin.HieuEcommerceApplicationContractsModule
+2023-09-02 01:13:46.934 +07:00 [INF]       - HieuEcommerce.HieuEcommerceDomainSharedModule
+2023-09-02 01:13:46.934 +07:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2023-09-02 01:13:46.934 +07:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2023-09-02 01:13:46.934 +07:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2023-09-02 01:13:46.934 +07:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2023-09-02 01:13:46.934 +07:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2023-09-02 01:13:46.934 +07:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2023-09-02 01:13:46.934 +07:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2023-09-02 01:13:46.934 +07:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2023-09-02 01:13:46.934 +07:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2023-09-02 01:13:46.934 +07:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2023-09-02 01:13:46.934 +07:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2023-09-02 01:13:46.934 +07:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2023-09-02 01:13:46.934 +07:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2023-09-02 01:13:46.934 +07:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2023-09-02 01:13:46.934 +07:00 [INF]         - Volo.Abp.FeatureManagement.AbpFeatureManagementDomainSharedModule
+2023-09-02 01:13:46.934 +07:00 [INF]           - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2023-09-02 01:13:46.934 +07:00 [INF]             - Volo.Abp.Json.AbpJsonAbstractionsModule
+2023-09-02 01:13:46.934 +07:00 [INF]             - Volo.Abp.Timing.AbpTimingModule
+2023-09-02 01:13:46.934 +07:00 [INF]         - Volo.Abp.Identity.AbpIdentityDomainSharedModule
+2023-09-02 01:13:46.934 +07:00 [INF]           - Volo.Abp.Users.AbpUsersDomainSharedModule
+2023-09-02 01:13:46.934 +07:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2023-09-02 01:13:46.934 +07:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2023-09-02 01:13:46.934 +07:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2023-09-02 01:13:46.934 +07:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2023-09-02 01:13:46.934 +07:00 [INF]         - Volo.Abp.OpenIddict.AbpOpenIddictDomainSharedModule
+2023-09-02 01:13:46.934 +07:00 [INF]         - Volo.Abp.PermissionManagement.AbpPermissionManagementDomainSharedModule
+2023-09-02 01:13:46.934 +07:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2023-09-02 01:13:46.934 +07:00 [INF]         - Volo.Abp.TenantManagement.AbpTenantManagementDomainSharedModule
+2023-09-02 01:13:46.934 +07:00 [INF]       - Volo.Abp.Account.AbpAccountApplicationContractsModule
+2023-09-02 01:13:46.934 +07:00 [INF]         - Volo.Abp.Identity.AbpIdentityApplicationContractsModule
+2023-09-02 01:13:46.934 +07:00 [INF]           - Volo.Abp.Users.AbpUsersAbstractionModule
+2023-09-02 01:13:46.934 +07:00 [INF]             - Volo.Abp.EventBus.AbpEventBusModule
+2023-09-02 01:13:46.934 +07:00 [INF]               - Volo.Abp.Json.AbpJsonModule
+2023-09-02 01:13:46.934 +07:00 [INF]               - Volo.Abp.Guids.AbpGuidsModule
+2023-09-02 01:13:46.934 +07:00 [INF]               - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2023-09-02 01:13:46.934 +07:00 [INF]               - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2023-09-02 01:13:46.934 +07:00 [INF]           - Volo.Abp.Authorization.AbpAuthorizationModule
+2023-09-02 01:13:46.934 +07:00 [INF]           - Volo.Abp.PermissionManagement.AbpPermissionManagementApplicationContractsModule
+2023-09-02 01:13:46.934 +07:00 [INF]             - Volo.Abp.Application.AbpDddApplicationContractsModule
+2023-09-02 01:13:46.934 +07:00 [INF]               - Volo.Abp.Auditing.AbpAuditingContractsModule
+2023-09-02 01:13:46.934 +07:00 [INF]       - Volo.Abp.FeatureManagement.AbpFeatureManagementApplicationContractsModule
+2023-09-02 01:13:46.934 +07:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2023-09-02 01:13:46.934 +07:00 [INF]       - Volo.Abp.TenantManagement.AbpTenantManagementApplicationContractsModule
+2023-09-02 01:13:46.934 +07:00 [INF]       - Volo.Abp.FluentValidation.AbpFluentValidationModule
+2023-09-02 01:13:46.934 +07:00 [INF]     - Volo.Abp.Account.AbpAccountHttpApiModule
+2023-09-02 01:13:46.934 +07:00 [INF]       - Volo.Abp.Identity.AbpIdentityHttpApiModule
+2023-09-02 01:13:46.934 +07:00 [INF]         - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2023-09-02 01:13:46.934 +07:00 [INF]           - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2023-09-02 01:13:46.934 +07:00 [INF]             - Volo.Abp.Auditing.AbpAuditingModule
+2023-09-02 01:13:46.934 +07:00 [INF]             - Volo.Abp.Http.AbpHttpModule
+2023-09-02 01:13:46.934 +07:00 [INF]               - Volo.Abp.Http.AbpHttpAbstractionsModule
+2023-09-02 01:13:46.934 +07:00 [INF]               - Volo.Abp.Minify.AbpMinifyModule
+2023-09-02 01:13:46.935 +07:00 [INF]             - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2023-09-02 01:13:46.935 +07:00 [INF]           - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2023-09-02 01:13:46.935 +07:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2023-09-02 01:13:46.935 +07:00 [INF]           - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2023-09-02 01:13:46.935 +07:00 [INF]             - Volo.Abp.UI.AbpUiModule
+2023-09-02 01:13:46.935 +07:00 [INF]           - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2023-09-02 01:13:46.935 +07:00 [INF]           - Volo.Abp.Application.AbpDddApplicationModule
+2023-09-02 01:13:46.935 +07:00 [INF]             - Volo.Abp.Domain.AbpDddDomainModule
+2023-09-02 01:13:46.935 +07:00 [INF]               - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2023-09-02 01:13:46.935 +07:00 [INF]               - Volo.Abp.Specifications.AbpSpecificationsModule
+2023-09-02 01:13:46.935 +07:00 [INF]               - Volo.Abp.Caching.AbpCachingModule
+2023-09-02 01:13:46.935 +07:00 [INF]                 - Volo.Abp.Serialization.AbpSerializationModule
+2023-09-02 01:13:46.935 +07:00 [INF]               - Volo.Abp.Domain.AbpDddDomainSharedModule
+2023-09-02 01:13:46.935 +07:00 [INF]     - Volo.Abp.PermissionManagement.HttpApi.AbpPermissionManagementHttpApiModule
+2023-09-02 01:13:46.935 +07:00 [INF]     - Volo.Abp.TenantManagement.AbpTenantManagementHttpApiModule
+2023-09-02 01:13:46.935 +07:00 [INF]       - Volo.Abp.FeatureManagement.AbpFeatureManagementHttpApiModule
+2023-09-02 01:13:46.935 +07:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementHttpApiModule
+2023-09-02 01:13:46.935 +07:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2023-09-02 01:13:46.935 +07:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2023-09-02 01:13:46.935 +07:00 [INF]   - Volo.Abp.Caching.StackExchangeRedis.AbpCachingStackExchangeRedisModule
+2023-09-02 01:13:46.935 +07:00 [INF]   - Volo.Abp.DistributedLocking.AbpDistributedLockingModule
+2023-09-02 01:13:46.935 +07:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2023-09-02 01:13:46.935 +07:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2023-09-02 01:13:46.935 +07:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2023-09-02 01:13:46.935 +07:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2023-09-02 01:13:46.935 +07:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2023-09-02 01:13:46.935 +07:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2023-09-02 01:13:46.935 +07:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2023-09-02 01:13:46.935 +07:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2023-09-02 01:13:46.935 +07:00 [INF]     - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2023-09-02 01:13:46.935 +07:00 [INF]   - HieuEcommerce.Admin.HieuEcommerceAdminApplicationModule
+2023-09-02 01:13:46.935 +07:00 [INF]     - HieuEcommerce.HieuEcommerceDomainModule
+2023-09-02 01:13:46.935 +07:00 [INF]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2023-09-02 01:13:46.935 +07:00 [INF]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2023-09-02 01:13:46.935 +07:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2023-09-02 01:13:46.935 +07:00 [INF]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2023-09-02 01:13:46.935 +07:00 [INF]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2023-09-02 01:13:46.935 +07:00 [INF]       - Volo.Abp.FeatureManagement.AbpFeatureManagementDomainModule
+2023-09-02 01:13:46.935 +07:00 [INF]       - Volo.Abp.Identity.AbpIdentityDomainModule
+2023-09-02 01:13:46.935 +07:00 [INF]         - Volo.Abp.Users.AbpUsersDomainModule
+2023-09-02 01:13:46.935 +07:00 [INF]       - Volo.Abp.OpenIddict.AbpOpenIddictDomainModule
+2023-09-02 01:13:46.935 +07:00 [INF]       - Volo.Abp.PermissionManagement.OpenIddict.AbpPermissionManagementDomainOpenIddictModule
+2023-09-02 01:13:46.935 +07:00 [INF]         - Volo.Abp.PermissionManagement.AbpPermissionManagementDomainModule
+2023-09-02 01:13:46.935 +07:00 [INF]       - Volo.Abp.PermissionManagement.Identity.AbpPermissionManagementDomainIdentityModule
+2023-09-02 01:13:46.935 +07:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2023-09-02 01:13:46.935 +07:00 [INF]       - Volo.Abp.TenantManagement.AbpTenantManagementDomainModule
+2023-09-02 01:13:46.935 +07:00 [INF]       - Volo.Abp.Emailing.AbpEmailingModule
+2023-09-02 01:13:46.935 +07:00 [INF]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2023-09-02 01:13:46.935 +07:00 [INF]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2023-09-02 01:13:46.935 +07:00 [INF]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2023-09-02 01:13:46.935 +07:00 [INF]     - Volo.Abp.Account.AbpAccountApplicationModule
+2023-09-02 01:13:46.935 +07:00 [INF]       - Volo.Abp.Identity.AbpIdentityApplicationModule
+2023-09-02 01:13:46.935 +07:00 [INF]         - Volo.Abp.PermissionManagement.AbpPermissionManagementApplicationModule
+2023-09-02 01:13:46.935 +07:00 [INF]     - Volo.Abp.TenantManagement.AbpTenantManagementApplicationModule
+2023-09-02 01:13:46.935 +07:00 [INF]     - Volo.Abp.FeatureManagement.AbpFeatureManagementApplicationModule
+2023-09-02 01:13:46.935 +07:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2023-09-02 01:13:46.935 +07:00 [INF]   - HieuEcommerce.EntityFrameworkCore.HieuEcommerceEntityFrameworkCoreModule
+2023-09-02 01:13:46.935 +07:00 [INF]     - Volo.Abp.Identity.EntityFrameworkCore.AbpIdentityEntityFrameworkCoreModule
+2023-09-02 01:13:46.935 +07:00 [INF]       - Volo.Abp.Users.EntityFrameworkCore.AbpUsersEntityFrameworkCoreModule
+2023-09-02 01:13:46.935 +07:00 [INF]         - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2023-09-02 01:13:46.935 +07:00 [INF]     - Volo.Abp.OpenIddict.EntityFrameworkCore.AbpOpenIddictEntityFrameworkCoreModule
+2023-09-02 01:13:46.935 +07:00 [INF]     - Volo.Abp.PermissionManagement.EntityFrameworkCore.AbpPermissionManagementEntityFrameworkCoreModule
+2023-09-02 01:13:46.935 +07:00 [INF]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2023-09-02 01:13:46.935 +07:00 [INF]     - Volo.Abp.EntityFrameworkCore.SqlServer.AbpEntityFrameworkCoreSqlServerModule
+2023-09-02 01:13:46.935 +07:00 [INF]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2023-09-02 01:13:46.935 +07:00 [INF]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2023-09-02 01:13:46.935 +07:00 [INF]     - Volo.Abp.TenantManagement.EntityFrameworkCore.AbpTenantManagementEntityFrameworkCoreModule
+2023-09-02 01:13:46.935 +07:00 [INF]     - Volo.Abp.FeatureManagement.EntityFrameworkCore.AbpFeatureManagementEntityFrameworkCoreModule
+2023-09-02 01:13:46.935 +07:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2023-09-02 01:13:46.935 +07:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2023-09-02 01:13:47.232 +07:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2023-09-02 01:13:47.249 +07:00 [DBG] Started background worker: Volo.Abp.OpenIddict.Tokens.TokenCleanupBackgroundWorker
+2023-09-02 01:13:47.828 +07:00 [INF] User profile is available. Using 'C:\Users\u\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-02 01:13:48.199 +07:00 [INF] Initialized all ABP modules.
+2023-09-02 01:13:48.351 +07:00 [INF] Now listening on: https://localhost:5001
+2023-09-02 01:13:48.351 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-02 01:13:48.351 +07:00 [INF] Hosting environment: Development
+2023-09-02 01:13:48.351 +07:00 [INF] Content root path: D:\Learning\Bài tập của Khóa học mua\HieuEcommerce\HieuEcommerce\aspnet-core\src\HieuEcommerce.Admin.HttpApi.Host
+2023-09-02 01:13:48.810 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/ - -
+2023-09-02 01:13:49.760 +07:00 [INF] Executing endpoint 'HieuEcommerce.Controllers.HomeController.Index (HieuEcommerce.Admin.HttpApi.Host)'
+2023-09-02 01:13:49.796 +07:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HieuEcommerce.Controllers.HomeController (HieuEcommerce.Admin.HttpApi.Host).
+2023-09-02 01:13:49.822 +07:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2023-09-02 01:13:49.826 +07:00 [INF] Executed action HieuEcommerce.Controllers.HomeController.Index (HieuEcommerce.Admin.HttpApi.Host) in 26.9076ms
+2023-09-02 01:13:49.826 +07:00 [INF] Executed endpoint 'HieuEcommerce.Controllers.HomeController.Index (HieuEcommerce.Admin.HttpApi.Host)'
+2023-09-02 01:13:49.844 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 302 0 - 1036.2619ms
+2023-09-02 01:13:49.865 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-09-02 01:13:50.043 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 178.1694ms
+2023-09-02 01:13:50.118 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-09-02 01:13:50.126 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 12034 application/javascript;+charset=utf-8 7.8993ms
+2023-09-02 01:13:50.129 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-09-02 01:13:50.188 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 58.9973ms
+2023-09-02 01:13:50.334 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-09-02 01:13:50.647 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 312.8559ms
+2023-09-02 01:14:03.198 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/app/product-categories application/json 243
+2023-09-02 01:14:03.202 +07:00 [INF] Executing endpoint 'HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService.CreateAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 01:14:03.213 +07:00 [INF] Route matched with {action = "Create", controller = "ProductCategories", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[HieuEcommerce.Admin.ProductCategories.ProductCategoryDto] CreateAsync(HieuEcommerce.Admin.ProductCategories.CreateUpdateProductCategoryDto) on controller HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService (HieuEcommerce.Admin.Application).
+2023-09-02 01:14:03.513 +07:00 [WRN] ---------- RemoteServiceErrorInfo ----------
+{
+  "code": null,
+  "message": "Your request is not valid!",
+  "details": "The following errors were detected during validation.\r\n - 'Name' must not be empty.\r\n",
+  "data": {},
+  "validationErrors": [
+    {
+      "message": "'Name' must not be empty.",
+      "members": [
+        "name"
+      ]
+    }
+  ]
+}
+
+2023-09-02 01:14:03.514 +07:00 [WRN] Method arguments are not valid! See ValidationErrors for details.
+Volo.Abp.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Volo.Abp.Validation.MethodInvocationValidator.ThrowValidationError(MethodInvocationValidationContext context)
+   at Volo.Abp.Validation.MethodInvocationValidator.ValidateAsync(MethodInvocationValidationContext context)
+   at Volo.Abp.Validation.ValidationInterceptor.ValidateAsync(IAbpMethodInvocation invocation)
+   at Volo.Abp.Validation.ValidationInterceptor.InterceptAsync(IAbpMethodInvocation invocation)
+   at Volo.Abp.Castle.DynamicProxy.CastleAsyncAbpInterceptorAdapter`1.InterceptAsync[TResult](IInvocation invocation, IInvocationProceedInfo proceedInfo, Func`3 proceed)
+   at Castle.DynamicProxy.AsyncInterceptorBase.ProceedAsynchronous[TResult](IInvocation invocation, IInvocationProceedInfo proceedInfo)
+   at Volo.Abp.Castle.DynamicProxy.CastleAbpMethodInvocationAdapterWithReturnValue`1.ProceedAsync()
+   at Volo.Abp.Uow.UnitOfWorkInterceptor.InterceptAsync(IAbpMethodInvocation invocation)
+   at Volo.Abp.Castle.DynamicProxy.CastleAsyncAbpInterceptorAdapter`1.InterceptAsync[TResult](IInvocation invocation, IInvocationProceedInfo proceedInfo, Func`3 proceed)
+   at lambda_method1510(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2023-09-02 01:14:03.515 +07:00 [WRN] There are 1 validation errors:
+'Name' must not be empty. (Name)
+
+2023-09-02 01:14:03.540 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Http.RemoteServiceErrorResponse'.
+2023-09-02 01:14:03.549 +07:00 [INF] Executed action HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService.CreateAsync (HieuEcommerce.Admin.Application) in 335.3157ms
+2023-09-02 01:14:03.549 +07:00 [INF] Executed endpoint 'HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService.CreateAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 01:14:04.121 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 01:14:04.134 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 01:14:04.136 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/app/product-categories application/json 243 - 400 - application/json;+charset=utf-8 937.9999ms
+2023-09-02 01:14:56.759 +07:00 [INF] Starting HieuEcommerce.Admin.HttpApi.Host.
+2023-09-02 01:15:00.496 +07:00 [INF] Loaded ABP modules:
+2023-09-02 01:15:00.497 +07:00 [INF] - HieuEcommerce.Admin.HieuEcommerceAdminHttpApiHostModule
+2023-09-02 01:15:00.497 +07:00 [INF]   - HieuEcommerce.Admin.HieuEcommerceHttpApiModule
+2023-09-02 01:15:00.497 +07:00 [INF]     - HieuEcommerce.Admin.HieuEcommerceApplicationContractsModule
+2023-09-02 01:15:00.497 +07:00 [INF]       - HieuEcommerce.HieuEcommerceDomainSharedModule
+2023-09-02 01:15:00.497 +07:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2023-09-02 01:15:00.497 +07:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2023-09-02 01:15:00.497 +07:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2023-09-02 01:15:00.497 +07:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2023-09-02 01:15:00.497 +07:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2023-09-02 01:15:00.497 +07:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2023-09-02 01:15:00.497 +07:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2023-09-02 01:15:00.497 +07:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2023-09-02 01:15:00.497 +07:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2023-09-02 01:15:00.497 +07:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2023-09-02 01:15:00.497 +07:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2023-09-02 01:15:00.497 +07:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2023-09-02 01:15:00.497 +07:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2023-09-02 01:15:00.497 +07:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2023-09-02 01:15:00.497 +07:00 [INF]         - Volo.Abp.FeatureManagement.AbpFeatureManagementDomainSharedModule
+2023-09-02 01:15:00.497 +07:00 [INF]           - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2023-09-02 01:15:00.497 +07:00 [INF]             - Volo.Abp.Json.AbpJsonAbstractionsModule
+2023-09-02 01:15:00.497 +07:00 [INF]             - Volo.Abp.Timing.AbpTimingModule
+2023-09-02 01:15:00.497 +07:00 [INF]         - Volo.Abp.Identity.AbpIdentityDomainSharedModule
+2023-09-02 01:15:00.497 +07:00 [INF]           - Volo.Abp.Users.AbpUsersDomainSharedModule
+2023-09-02 01:15:00.497 +07:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2023-09-02 01:15:00.497 +07:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2023-09-02 01:15:00.497 +07:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2023-09-02 01:15:00.497 +07:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2023-09-02 01:15:00.497 +07:00 [INF]         - Volo.Abp.OpenIddict.AbpOpenIddictDomainSharedModule
+2023-09-02 01:15:00.497 +07:00 [INF]         - Volo.Abp.PermissionManagement.AbpPermissionManagementDomainSharedModule
+2023-09-02 01:15:00.497 +07:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2023-09-02 01:15:00.497 +07:00 [INF]         - Volo.Abp.TenantManagement.AbpTenantManagementDomainSharedModule
+2023-09-02 01:15:00.497 +07:00 [INF]       - Volo.Abp.Account.AbpAccountApplicationContractsModule
+2023-09-02 01:15:00.497 +07:00 [INF]         - Volo.Abp.Identity.AbpIdentityApplicationContractsModule
+2023-09-02 01:15:00.497 +07:00 [INF]           - Volo.Abp.Users.AbpUsersAbstractionModule
+2023-09-02 01:15:00.497 +07:00 [INF]             - Volo.Abp.EventBus.AbpEventBusModule
+2023-09-02 01:15:00.497 +07:00 [INF]               - Volo.Abp.Json.AbpJsonModule
+2023-09-02 01:15:00.497 +07:00 [INF]               - Volo.Abp.Guids.AbpGuidsModule
+2023-09-02 01:15:00.497 +07:00 [INF]               - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2023-09-02 01:15:00.497 +07:00 [INF]               - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2023-09-02 01:15:00.497 +07:00 [INF]           - Volo.Abp.Authorization.AbpAuthorizationModule
+2023-09-02 01:15:00.497 +07:00 [INF]           - Volo.Abp.PermissionManagement.AbpPermissionManagementApplicationContractsModule
+2023-09-02 01:15:00.497 +07:00 [INF]             - Volo.Abp.Application.AbpDddApplicationContractsModule
+2023-09-02 01:15:00.497 +07:00 [INF]               - Volo.Abp.Auditing.AbpAuditingContractsModule
+2023-09-02 01:15:00.497 +07:00 [INF]       - Volo.Abp.FeatureManagement.AbpFeatureManagementApplicationContractsModule
+2023-09-02 01:15:00.497 +07:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2023-09-02 01:15:00.497 +07:00 [INF]       - Volo.Abp.TenantManagement.AbpTenantManagementApplicationContractsModule
+2023-09-02 01:15:00.497 +07:00 [INF]       - Volo.Abp.FluentValidation.AbpFluentValidationModule
+2023-09-02 01:15:00.497 +07:00 [INF]     - Volo.Abp.Account.AbpAccountHttpApiModule
+2023-09-02 01:15:00.497 +07:00 [INF]       - Volo.Abp.Identity.AbpIdentityHttpApiModule
+2023-09-02 01:15:00.497 +07:00 [INF]         - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2023-09-02 01:15:00.497 +07:00 [INF]           - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2023-09-02 01:15:00.497 +07:00 [INF]             - Volo.Abp.Auditing.AbpAuditingModule
+2023-09-02 01:15:00.497 +07:00 [INF]             - Volo.Abp.Http.AbpHttpModule
+2023-09-02 01:15:00.497 +07:00 [INF]               - Volo.Abp.Http.AbpHttpAbstractionsModule
+2023-09-02 01:15:00.497 +07:00 [INF]               - Volo.Abp.Minify.AbpMinifyModule
+2023-09-02 01:15:00.497 +07:00 [INF]             - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2023-09-02 01:15:00.497 +07:00 [INF]           - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2023-09-02 01:15:00.497 +07:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2023-09-02 01:15:00.497 +07:00 [INF]           - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2023-09-02 01:15:00.497 +07:00 [INF]             - Volo.Abp.UI.AbpUiModule
+2023-09-02 01:15:00.497 +07:00 [INF]           - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2023-09-02 01:15:00.497 +07:00 [INF]           - Volo.Abp.Application.AbpDddApplicationModule
+2023-09-02 01:15:00.497 +07:00 [INF]             - Volo.Abp.Domain.AbpDddDomainModule
+2023-09-02 01:15:00.497 +07:00 [INF]               - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2023-09-02 01:15:00.497 +07:00 [INF]               - Volo.Abp.Specifications.AbpSpecificationsModule
+2023-09-02 01:15:00.497 +07:00 [INF]               - Volo.Abp.Caching.AbpCachingModule
+2023-09-02 01:15:00.497 +07:00 [INF]                 - Volo.Abp.Serialization.AbpSerializationModule
+2023-09-02 01:15:00.497 +07:00 [INF]               - Volo.Abp.Domain.AbpDddDomainSharedModule
+2023-09-02 01:15:00.497 +07:00 [INF]     - Volo.Abp.PermissionManagement.HttpApi.AbpPermissionManagementHttpApiModule
+2023-09-02 01:15:00.497 +07:00 [INF]     - Volo.Abp.TenantManagement.AbpTenantManagementHttpApiModule
+2023-09-02 01:15:00.497 +07:00 [INF]       - Volo.Abp.FeatureManagement.AbpFeatureManagementHttpApiModule
+2023-09-02 01:15:00.497 +07:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementHttpApiModule
+2023-09-02 01:15:00.497 +07:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2023-09-02 01:15:00.497 +07:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2023-09-02 01:15:00.497 +07:00 [INF]   - Volo.Abp.Caching.StackExchangeRedis.AbpCachingStackExchangeRedisModule
+2023-09-02 01:15:00.497 +07:00 [INF]   - Volo.Abp.DistributedLocking.AbpDistributedLockingModule
+2023-09-02 01:15:00.497 +07:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2023-09-02 01:15:00.497 +07:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2023-09-02 01:15:00.497 +07:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2023-09-02 01:15:00.497 +07:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2023-09-02 01:15:00.497 +07:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2023-09-02 01:15:00.497 +07:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2023-09-02 01:15:00.497 +07:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2023-09-02 01:15:00.497 +07:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2023-09-02 01:15:00.497 +07:00 [INF]     - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2023-09-02 01:15:00.497 +07:00 [INF]   - HieuEcommerce.Admin.HieuEcommerceAdminApplicationModule
+2023-09-02 01:15:00.497 +07:00 [INF]     - HieuEcommerce.HieuEcommerceDomainModule
+2023-09-02 01:15:00.497 +07:00 [INF]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2023-09-02 01:15:00.497 +07:00 [INF]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2023-09-02 01:15:00.497 +07:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2023-09-02 01:15:00.497 +07:00 [INF]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2023-09-02 01:15:00.497 +07:00 [INF]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2023-09-02 01:15:00.497 +07:00 [INF]       - Volo.Abp.FeatureManagement.AbpFeatureManagementDomainModule
+2023-09-02 01:15:00.497 +07:00 [INF]       - Volo.Abp.Identity.AbpIdentityDomainModule
+2023-09-02 01:15:00.497 +07:00 [INF]         - Volo.Abp.Users.AbpUsersDomainModule
+2023-09-02 01:15:00.497 +07:00 [INF]       - Volo.Abp.OpenIddict.AbpOpenIddictDomainModule
+2023-09-02 01:15:00.497 +07:00 [INF]       - Volo.Abp.PermissionManagement.OpenIddict.AbpPermissionManagementDomainOpenIddictModule
+2023-09-02 01:15:00.497 +07:00 [INF]         - Volo.Abp.PermissionManagement.AbpPermissionManagementDomainModule
+2023-09-02 01:15:00.497 +07:00 [INF]       - Volo.Abp.PermissionManagement.Identity.AbpPermissionManagementDomainIdentityModule
+2023-09-02 01:15:00.497 +07:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2023-09-02 01:15:00.497 +07:00 [INF]       - Volo.Abp.TenantManagement.AbpTenantManagementDomainModule
+2023-09-02 01:15:00.497 +07:00 [INF]       - Volo.Abp.Emailing.AbpEmailingModule
+2023-09-02 01:15:00.497 +07:00 [INF]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2023-09-02 01:15:00.497 +07:00 [INF]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2023-09-02 01:15:00.497 +07:00 [INF]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2023-09-02 01:15:00.497 +07:00 [INF]     - Volo.Abp.Account.AbpAccountApplicationModule
+2023-09-02 01:15:00.497 +07:00 [INF]       - Volo.Abp.Identity.AbpIdentityApplicationModule
+2023-09-02 01:15:00.497 +07:00 [INF]         - Volo.Abp.PermissionManagement.AbpPermissionManagementApplicationModule
+2023-09-02 01:15:00.497 +07:00 [INF]     - Volo.Abp.TenantManagement.AbpTenantManagementApplicationModule
+2023-09-02 01:15:00.497 +07:00 [INF]     - Volo.Abp.FeatureManagement.AbpFeatureManagementApplicationModule
+2023-09-02 01:15:00.497 +07:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2023-09-02 01:15:00.497 +07:00 [INF]   - HieuEcommerce.EntityFrameworkCore.HieuEcommerceEntityFrameworkCoreModule
+2023-09-02 01:15:00.497 +07:00 [INF]     - Volo.Abp.Identity.EntityFrameworkCore.AbpIdentityEntityFrameworkCoreModule
+2023-09-02 01:15:00.497 +07:00 [INF]       - Volo.Abp.Users.EntityFrameworkCore.AbpUsersEntityFrameworkCoreModule
+2023-09-02 01:15:00.497 +07:00 [INF]         - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2023-09-02 01:15:00.497 +07:00 [INF]     - Volo.Abp.OpenIddict.EntityFrameworkCore.AbpOpenIddictEntityFrameworkCoreModule
+2023-09-02 01:15:00.497 +07:00 [INF]     - Volo.Abp.PermissionManagement.EntityFrameworkCore.AbpPermissionManagementEntityFrameworkCoreModule
+2023-09-02 01:15:00.497 +07:00 [INF]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2023-09-02 01:15:00.497 +07:00 [INF]     - Volo.Abp.EntityFrameworkCore.SqlServer.AbpEntityFrameworkCoreSqlServerModule
+2023-09-02 01:15:00.497 +07:00 [INF]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2023-09-02 01:15:00.497 +07:00 [INF]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2023-09-02 01:15:00.497 +07:00 [INF]     - Volo.Abp.TenantManagement.EntityFrameworkCore.AbpTenantManagementEntityFrameworkCoreModule
+2023-09-02 01:15:00.498 +07:00 [INF]     - Volo.Abp.FeatureManagement.EntityFrameworkCore.AbpFeatureManagementEntityFrameworkCoreModule
+2023-09-02 01:15:00.498 +07:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2023-09-02 01:15:00.498 +07:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2023-09-02 01:15:00.805 +07:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2023-09-02 01:15:00.820 +07:00 [DBG] Started background worker: Volo.Abp.OpenIddict.Tokens.TokenCleanupBackgroundWorker
+2023-09-02 01:15:01.334 +07:00 [INF] User profile is available. Using 'C:\Users\u\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-02 01:15:01.649 +07:00 [INF] Initialized all ABP modules.
+2023-09-02 01:15:01.778 +07:00 [INF] Now listening on: https://localhost:5001
+2023-09-02 01:15:01.778 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-02 01:15:01.778 +07:00 [INF] Hosting environment: Development
+2023-09-02 01:15:01.778 +07:00 [INF] Content root path: D:\Learning\Bài tập của Khóa học mua\HieuEcommerce\HieuEcommerce\aspnet-core\src\HieuEcommerce.Admin.HttpApi.Host
+2023-09-02 01:15:02.317 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/ - -
+2023-09-02 01:15:03.196 +07:00 [INF] Executing endpoint 'HieuEcommerce.Controllers.HomeController.Index (HieuEcommerce.Admin.HttpApi.Host)'
+2023-09-02 01:15:03.219 +07:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller HieuEcommerce.Controllers.HomeController (HieuEcommerce.Admin.HttpApi.Host).
+2023-09-02 01:15:03.255 +07:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2023-09-02 01:15:03.260 +07:00 [INF] Executed action HieuEcommerce.Controllers.HomeController.Index (HieuEcommerce.Admin.HttpApi.Host) in 36.4744ms
+2023-09-02 01:15:03.260 +07:00 [INF] Executed endpoint 'HieuEcommerce.Controllers.HomeController.Index (HieuEcommerce.Admin.HttpApi.Host)'
+2023-09-02 01:15:03.276 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 302 0 - 959.2554ms
+2023-09-02 01:15:03.292 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-09-02 01:15:03.441 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 149.2774ms
+2023-09-02 01:15:03.494 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-09-02 01:15:03.500 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 12034 application/javascript;+charset=utf-8 5.6754ms
+2023-09-02 01:15:03.502 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-09-02 01:15:03.540 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 38.3896ms
+2023-09-02 01:15:03.682 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-09-02 01:15:03.940 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 257.7275ms
+2023-09-02 01:15:24.444 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/abp/Swashbuckle/SetCsrfCookie - -
+2023-09-02 01:15:24.447 +07:00 [INF] Executing endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2023-09-02 01:15:24.449 +07:00 [INF] Route matched with {area = "Abp", action = "SetCsrfCookie", controller = "AbpSwashbuckle", page = ""}. Executing controller action with signature Void SetCsrfCookie() on controller Volo.Abp.Swashbuckle.AbpSwashbuckleController (Volo.Abp.Swashbuckle).
+2023-09-02 01:15:24.459 +07:00 [INF] Executed action Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle) in 9.929ms
+2023-09-02 01:15:24.459 +07:00 [INF] Executed endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2023-09-02 01:15:24.459 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/abp/Swashbuckle/SetCsrfCookie - - - 204 - - 15.2641ms
+2023-09-02 01:15:24.566 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/app/product-categories/filter?SkipCount=1&MaxResultCount=1 - -
+2023-09-02 01:15:24.572 +07:00 [INF] Executing endpoint 'HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService.GetListFilterAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 01:15:24.586 +07:00 [INF] Route matched with {action = "GetListFilter", controller = "ProductCategories", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.Application.Dtos.PagedResultDto`1[HieuEcommerce.Admin.ProductCategories.ProductCategoryInListDto]] GetListFilterAsync(HieuEcommerce.Admin.BaseListFilterDto) on controller HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService (HieuEcommerce.Admin.Application).
+2023-09-02 01:15:25.373 +07:00 [WRN] No store type was specified for the decimal property 'Value' on entity type 'ProductAttributeDecimal'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-09-02 01:15:25.819 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-09-02 01:15:25.820 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-09-02 01:15:25.915 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 01:15:25.922 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Application.Dtos.PagedResultDto`1[[HieuEcommerce.Admin.ProductCategories.ProductCategoryInListDto, HieuEcommerce.Admin.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-02 01:15:25.936 +07:00 [INF] Executed action HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService.GetListFilterAsync (HieuEcommerce.Admin.Application) in 1350.789ms
+2023-09-02 01:15:25.937 +07:00 [INF] Executed endpoint 'HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService.GetListFilterAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 01:15:25.939 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 01:15:25.940 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/app/product-categories/filter?SkipCount=1&MaxResultCount=1 - - - 200 - application/json;+charset=utf-8 1373.9884ms
+2023-09-02 01:16:01.718 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/app/product/filter?SkipCount=1&MaxResultCount=1 - -
+2023-09-02 01:16:01.724 +07:00 [INF] Executing endpoint 'HieuEcommerce.Admin.Products.ProductAppService.GetListFilterAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 01:16:01.730 +07:00 [INF] Route matched with {action = "GetListFilter", controller = "Product", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.Application.Dtos.PagedResultDto`1[HieuEcommerce.Admin.Products.ProductInListDto]] GetListFilterAsync(HieuEcommerce.Admin.Products.ProductListFilterDto) on controller HieuEcommerce.Admin.Products.ProductAppService (HieuEcommerce.Admin.Application).
+2023-09-02 01:16:01.865 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-09-02 01:16:01.865 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-09-02 01:16:01.880 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 01:16:01.881 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Application.Dtos.PagedResultDto`1[[HieuEcommerce.Admin.Products.ProductInListDto, HieuEcommerce.Admin.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-02 01:16:01.886 +07:00 [INF] Executed action HieuEcommerce.Admin.Products.ProductAppService.GetListFilterAsync (HieuEcommerce.Admin.Application) in 156.4486ms
+2023-09-02 01:16:01.886 +07:00 [INF] Executed endpoint 'HieuEcommerce.Admin.Products.ProductAppService.GetListFilterAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 01:16:01.887 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 01:16:01.887 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/app/product/filter?SkipCount=1&MaxResultCount=1 - - - 200 - application/json;+charset=utf-8 168.5428ms
+2023-09-02 01:16:39.894 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/abp/api-definition?includeTypes=true - -
+2023-09-02 01:16:39.896 +07:00 [INF] Executing endpoint 'Volo.Abp.AspNetCore.Mvc.ApiExploring.AbpApiDefinitionController.Get (Volo.Abp.AspNetCore.Mvc)'
+2023-09-02 01:16:39.899 +07:00 [INF] Route matched with {area = "abp", action = "Get", controller = "AbpApiDefinition", page = ""}. Executing controller action with signature Volo.Abp.Http.Modeling.ApplicationApiDescriptionModel Get(Volo.Abp.Http.Modeling.ApplicationApiDescriptionModelRequestDto) on controller Volo.Abp.AspNetCore.Mvc.ApiExploring.AbpApiDefinitionController (Volo.Abp.AspNetCore.Mvc).
+2023-09-02 01:16:39.918 +07:00 [DBG] ActionApiDescriptionModel.Create: Account.RegisterAsyncByInput
+2023-09-02 01:16:39.933 +07:00 [DBG] ActionApiDescriptionModel.Create: Account.SendPasswordResetCodeAsyncByInput
+2023-09-02 01:16:39.933 +07:00 [DBG] ActionApiDescriptionModel.Create: Account.VerifyPasswordResetTokenAsyncByInput
+2023-09-02 01:16:39.934 +07:00 [DBG] ActionApiDescriptionModel.Create: Account.ResetPasswordAsyncByInput
+2023-09-02 01:16:39.935 +07:00 [DBG] ActionApiDescriptionModel.Create: Profile.GetAsync
+2023-09-02 01:16:39.935 +07:00 [DBG] ActionApiDescriptionModel.Create: Profile.UpdateAsyncByInput
+2023-09-02 01:16:39.936 +07:00 [DBG] ActionApiDescriptionModel.Create: Profile.ChangePasswordAsyncByInput
+2023-09-02 01:16:39.936 +07:00 [DBG] ActionApiDescriptionModel.Create: AbpTenant.FindTenantByNameAsyncByName
+2023-09-02 01:16:39.936 +07:00 [DBG] ActionApiDescriptionModel.Create: AbpTenant.FindTenantByIdAsyncById
+2023-09-02 01:16:39.937 +07:00 [DBG] ActionApiDescriptionModel.Create: IdentityRole.GetAllListAsync
+2023-09-02 01:16:39.937 +07:00 [DBG] ActionApiDescriptionModel.Create: IdentityRole.GetListAsyncByInput
+2023-09-02 01:16:39.939 +07:00 [DBG] ActionApiDescriptionModel.Create: IdentityRole.GetAsyncById
+2023-09-02 01:16:39.939 +07:00 [DBG] ActionApiDescriptionModel.Create: IdentityRole.CreateAsyncByInput
+2023-09-02 01:16:39.939 +07:00 [DBG] ActionApiDescriptionModel.Create: IdentityRole.UpdateAsyncByIdAndInput
+2023-09-02 01:16:39.940 +07:00 [DBG] ActionApiDescriptionModel.Create: IdentityRole.DeleteAsyncById
+2023-09-02 01:16:39.940 +07:00 [DBG] ActionApiDescriptionModel.Create: IdentityUser.GetAsyncById
+2023-09-02 01:16:39.940 +07:00 [DBG] ActionApiDescriptionModel.Create: IdentityUser.GetListAsyncByInput
+2023-09-02 01:16:39.940 +07:00 [DBG] ActionApiDescriptionModel.Create: IdentityUser.CreateAsyncByInput
+2023-09-02 01:16:39.941 +07:00 [DBG] ActionApiDescriptionModel.Create: IdentityUser.UpdateAsyncByIdAndInput
+2023-09-02 01:16:39.941 +07:00 [DBG] ActionApiDescriptionModel.Create: IdentityUser.DeleteAsyncById
+2023-09-02 01:16:39.941 +07:00 [DBG] ActionApiDescriptionModel.Create: IdentityUser.GetRolesAsyncById
+2023-09-02 01:16:39.941 +07:00 [DBG] ActionApiDescriptionModel.Create: IdentityUser.GetAssignableRolesAsync
+2023-09-02 01:16:39.941 +07:00 [DBG] ActionApiDescriptionModel.Create: IdentityUser.UpdateRolesAsyncByIdAndInput
+2023-09-02 01:16:39.941 +07:00 [DBG] ActionApiDescriptionModel.Create: IdentityUser.FindByUsernameAsyncByUserName
+2023-09-02 01:16:39.941 +07:00 [DBG] ActionApiDescriptionModel.Create: IdentityUser.FindByEmailAsyncByEmail
+2023-09-02 01:16:39.942 +07:00 [DBG] ActionApiDescriptionModel.Create: IdentityUserLookup.FindByIdAsyncById
+2023-09-02 01:16:39.942 +07:00 [DBG] ActionApiDescriptionModel.Create: IdentityUserLookup.FindByUserNameAsyncByUserName
+2023-09-02 01:16:39.942 +07:00 [DBG] ActionApiDescriptionModel.Create: IdentityUserLookup.SearchAsyncByInput
+2023-09-02 01:16:39.942 +07:00 [DBG] ActionApiDescriptionModel.Create: IdentityUserLookup.GetCountAsyncByInput
+2023-09-02 01:16:39.942 +07:00 [DBG] ActionApiDescriptionModel.Create: Permissions.GetAsyncByProviderNameAndProviderKey
+2023-09-02 01:16:39.942 +07:00 [DBG] ActionApiDescriptionModel.Create: Permissions.UpdateAsyncByProviderNameAndProviderKeyAndInput
+2023-09-02 01:16:39.943 +07:00 [DBG] ActionApiDescriptionModel.Create: EmailSettings.GetAsync
+2023-09-02 01:16:39.943 +07:00 [DBG] ActionApiDescriptionModel.Create: EmailSettings.UpdateAsyncByInput
+2023-09-02 01:16:39.943 +07:00 [DBG] ActionApiDescriptionModel.Create: EmailSettings.SendTestEmailAsyncByInput
+2023-09-02 01:16:39.943 +07:00 [DBG] ActionApiDescriptionModel.Create: Tenant.GetAsyncById
+2023-09-02 01:16:39.943 +07:00 [DBG] ActionApiDescriptionModel.Create: Tenant.GetListAsyncByInput
+2023-09-02 01:16:39.944 +07:00 [DBG] ActionApiDescriptionModel.Create: Tenant.CreateAsyncByInput
+2023-09-02 01:16:39.944 +07:00 [DBG] ActionApiDescriptionModel.Create: Tenant.UpdateAsyncByIdAndInput
+2023-09-02 01:16:39.944 +07:00 [DBG] ActionApiDescriptionModel.Create: Tenant.DeleteAsyncById
+2023-09-02 01:16:39.944 +07:00 [DBG] ActionApiDescriptionModel.Create: Tenant.GetDefaultConnectionStringAsyncById
+2023-09-02 01:16:39.944 +07:00 [DBG] ActionApiDescriptionModel.Create: Tenant.UpdateDefaultConnectionStringAsyncByIdAndDefaultConnectionString
+2023-09-02 01:16:39.944 +07:00 [DBG] ActionApiDescriptionModel.Create: Tenant.DeleteDefaultConnectionStringAsyncById
+2023-09-02 01:16:39.944 +07:00 [DBG] ActionApiDescriptionModel.Create: Features.GetAsyncByProviderNameAndProviderKey
+2023-09-02 01:16:39.944 +07:00 [DBG] ActionApiDescriptionModel.Create: Features.UpdateAsyncByProviderNameAndProviderKeyAndInput
+2023-09-02 01:16:39.945 +07:00 [DBG] ActionApiDescriptionModel.Create: Features.DeleteAsyncByProviderNameAndProviderKey
+2023-09-02 01:16:39.945 +07:00 [DBG] ActionApiDescriptionModel.Create: AbpApplicationConfiguration.GetAsyncByOptions
+2023-09-02 01:16:39.946 +07:00 [DBG] ActionApiDescriptionModel.Create: AbpApplicationLocalization.GetAsyncByInput
+2023-09-02 01:16:39.946 +07:00 [DBG] ActionApiDescriptionModel.Create: AbpApiDefinition.GetByModel
+2023-09-02 01:16:39.946 +07:00 [DBG] ActionApiDescriptionModel.Create: Product.DeleteMultipleAsyncByIds
+2023-09-02 01:16:39.947 +07:00 [DBG] ActionApiDescriptionModel.Create: Product.GetListAllAsync
+2023-09-02 01:16:39.947 +07:00 [DBG] ActionApiDescriptionModel.Create: Product.GetListFilterAsyncByInput
+2023-09-02 01:16:39.947 +07:00 [DBG] ActionApiDescriptionModel.Create: Product.CreateAsyncByInput
+2023-09-02 01:16:39.947 +07:00 [DBG] ActionApiDescriptionModel.Create: Product.UpdateAsyncByIdAndInput
+2023-09-02 01:16:39.948 +07:00 [DBG] ActionApiDescriptionModel.Create: Product.DeleteAsyncById
+2023-09-02 01:16:39.948 +07:00 [DBG] ActionApiDescriptionModel.Create: Product.GetAsyncById
+2023-09-02 01:16:39.948 +07:00 [DBG] ActionApiDescriptionModel.Create: Product.GetListAsyncByInput
+2023-09-02 01:16:39.948 +07:00 [DBG] ActionApiDescriptionModel.Create: ProductCategories.DeleteMultipleAsyncByIds
+2023-09-02 01:16:39.948 +07:00 [DBG] ActionApiDescriptionModel.Create: ProductCategories.GetListAllAsync
+2023-09-02 01:16:39.948 +07:00 [DBG] ActionApiDescriptionModel.Create: ProductCategories.GetListFilterAsyncByInput
+2023-09-02 01:16:39.948 +07:00 [DBG] ActionApiDescriptionModel.Create: ProductCategories.CreateAsyncByInput
+2023-09-02 01:16:39.948 +07:00 [DBG] ActionApiDescriptionModel.Create: ProductCategories.UpdateAsyncByIdAndInput
+2023-09-02 01:16:39.948 +07:00 [DBG] ActionApiDescriptionModel.Create: ProductCategories.DeleteAsyncById
+2023-09-02 01:16:39.948 +07:00 [DBG] ActionApiDescriptionModel.Create: ProductCategories.GetAsyncById
+2023-09-02 01:16:39.948 +07:00 [DBG] ActionApiDescriptionModel.Create: ProductCategories.GetListAsyncByInput
+2023-09-02 01:16:39.953 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Http.Modeling.ApplicationApiDescriptionModel'.
+2023-09-02 01:16:39.989 +07:00 [INF] Executed action Volo.Abp.AspNetCore.Mvc.ApiExploring.AbpApiDefinitionController.Get (Volo.Abp.AspNetCore.Mvc) in 90.5809ms
+2023-09-02 01:16:39.989 +07:00 [INF] Executed endpoint 'Volo.Abp.AspNetCore.Mvc.ApiExploring.AbpApiDefinitionController.Get (Volo.Abp.AspNetCore.Mvc)'
+2023-09-02 01:16:39.990 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/abp/api-definition?includeTypes=true - - - 200 - application/json;+charset=utf-8 95.3343ms
+2023-09-02 01:17:04.303 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/abp/application-configuration?includeLocalizationResources=false - -
+2023-09-02 01:17:04.312 +07:00 [INF] CORS policy execution successful.
+2023-09-02 01:17:04.316 +07:00 [INF] Executing endpoint 'Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationConfigurationController.GetAsync (Volo.Abp.AspNetCore.Mvc)'
+2023-09-02 01:17:04.321 +07:00 [INF] Route matched with {area = "abp", action = "Get", controller = "AbpApplicationConfiguration", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.ApplicationConfigurationDto] GetAsync(Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.ApplicationConfigurationRequestOptions) on controller Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationConfigurationController (Volo.Abp.AspNetCore.Mvc).
+2023-09-02 01:17:04.369 +07:00 [DBG] Executing AbpApplicationConfigurationAppService.GetAsync()...
+2023-09-02 01:17:04.881 +07:00 [DBG] Executed AbpApplicationConfigurationAppService.GetAsync().
+2023-09-02 01:17:04.884 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.ApplicationConfigurationDto'.
+2023-09-02 01:17:04.910 +07:00 [INF] Executed action Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationConfigurationController.GetAsync (Volo.Abp.AspNetCore.Mvc) in 588.9143ms
+2023-09-02 01:17:04.910 +07:00 [INF] Executed endpoint 'Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationConfigurationController.GetAsync (Volo.Abp.AspNetCore.Mvc)'
+2023-09-02 01:17:04.910 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/abp/application-configuration?includeLocalizationResources=false - - - 200 - application/json;+charset=utf-8 607.5756ms
+2023-09-02 01:17:04.915 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/abp/application-localization?cultureName=fr&onlyDynamics=false - -
+2023-09-02 01:17:04.916 +07:00 [INF] CORS policy execution successful.
+2023-09-02 01:17:04.917 +07:00 [INF] Executing endpoint 'Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationLocalizationController.GetAsync (Volo.Abp.AspNetCore.Mvc)'
+2023-09-02 01:17:04.920 +07:00 [INF] Route matched with {area = "abp", action = "Get", controller = "AbpApplicationLocalization", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.ApplicationLocalizationDto] GetAsync(Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.ApplicationLocalizationRequestDto) on controller Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationLocalizationController (Volo.Abp.AspNetCore.Mvc).
+2023-09-02 01:17:04.979 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.ApplicationLocalizationDto'.
+2023-09-02 01:17:04.984 +07:00 [INF] Executed action Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationLocalizationController.GetAsync (Volo.Abp.AspNetCore.Mvc) in 63.6797ms
+2023-09-02 01:17:04.984 +07:00 [INF] Executed endpoint 'Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationLocalizationController.GetAsync (Volo.Abp.AspNetCore.Mvc)'
+2023-09-02 01:17:04.985 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/abp/application-localization?cultureName=fr&onlyDynamics=false - - - 200 - application/json;+charset=utf-8 69.7149ms
+2023-09-02 01:17:07.027 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/abp/application-configuration?includeLocalizationResources=false - -
+2023-09-02 01:17:07.027 +07:00 [INF] CORS policy execution successful.
+2023-09-02 01:17:07.030 +07:00 [INF] Executing endpoint 'Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationConfigurationController.GetAsync (Volo.Abp.AspNetCore.Mvc)'
+2023-09-02 01:17:07.030 +07:00 [INF] Route matched with {area = "abp", action = "Get", controller = "AbpApplicationConfiguration", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.ApplicationConfigurationDto] GetAsync(Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.ApplicationConfigurationRequestOptions) on controller Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationConfigurationController (Volo.Abp.AspNetCore.Mvc).
+2023-09-02 01:17:07.040 +07:00 [DBG] Executing AbpApplicationConfigurationAppService.GetAsync()...
+2023-09-02 01:17:07.076 +07:00 [DBG] Executed AbpApplicationConfigurationAppService.GetAsync().
+2023-09-02 01:17:07.077 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.ApplicationConfigurationDto'.
+2023-09-02 01:17:07.078 +07:00 [INF] Executed action Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationConfigurationController.GetAsync (Volo.Abp.AspNetCore.Mvc) in 47.6656ms
+2023-09-02 01:17:07.078 +07:00 [INF] Executed endpoint 'Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationConfigurationController.GetAsync (Volo.Abp.AspNetCore.Mvc)'
+2023-09-02 01:17:07.079 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/abp/application-configuration?includeLocalizationResources=false - - - 200 - application/json;+charset=utf-8 52.0255ms
+2023-09-02 01:17:07.103 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/abp/application-localization?cultureName=fr&onlyDynamics=false - -
+2023-09-02 01:17:07.103 +07:00 [INF] CORS policy execution successful.
+2023-09-02 01:17:07.105 +07:00 [INF] Executing endpoint 'Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationLocalizationController.GetAsync (Volo.Abp.AspNetCore.Mvc)'
+2023-09-02 01:17:07.105 +07:00 [INF] Route matched with {area = "abp", action = "Get", controller = "AbpApplicationLocalization", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.ApplicationLocalizationDto] GetAsync(Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.ApplicationLocalizationRequestDto) on controller Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationLocalizationController (Volo.Abp.AspNetCore.Mvc).
+2023-09-02 01:17:07.109 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.ApplicationLocalizationDto'.
+2023-09-02 01:17:07.112 +07:00 [INF] Executed action Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationLocalizationController.GetAsync (Volo.Abp.AspNetCore.Mvc) in 7.0953ms
+2023-09-02 01:17:07.112 +07:00 [INF] Executed endpoint 'Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationLocalizationController.GetAsync (Volo.Abp.AspNetCore.Mvc)'
+2023-09-02 01:17:07.113 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/abp/application-localization?cultureName=fr&onlyDynamics=false - - - 200 - application/json;+charset=utf-8 10.4387ms
+2023-09-02 01:17:08.362 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/app/product/filter?skipCount=0&maxResultCount=10 - -
+2023-09-02 01:17:08.362 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/app/product-categories/all - -
+2023-09-02 01:17:08.363 +07:00 [INF] CORS policy execution successful.
+2023-09-02 01:17:08.363 +07:00 [INF] CORS policy execution successful.
+2023-09-02 01:17:08.365 +07:00 [INF] Executing endpoint 'HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService.GetListAllAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 01:17:08.365 +07:00 [INF] Executing endpoint 'HieuEcommerce.Admin.Products.ProductAppService.GetListFilterAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 01:17:08.365 +07:00 [INF] Route matched with {action = "GetListFilter", controller = "Product", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.Application.Dtos.PagedResultDto`1[HieuEcommerce.Admin.Products.ProductInListDto]] GetListFilterAsync(HieuEcommerce.Admin.Products.ProductListFilterDto) on controller HieuEcommerce.Admin.Products.ProductAppService (HieuEcommerce.Admin.Application).
+2023-09-02 01:17:08.368 +07:00 [INF] Route matched with {action = "GetListAll", controller = "ProductCategories", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[HieuEcommerce.Admin.ProductCategories.ProductCategoryInListDto]] GetListAllAsync() on controller HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService (HieuEcommerce.Admin.Application).
+2023-09-02 01:17:08.386 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-09-02 01:17:08.386 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-09-02 01:17:08.430 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 01:17:08.430 +07:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HieuEcommerce.Admin.ProductCategories.ProductCategoryInListDto, HieuEcommerce.Admin.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-02 01:17:08.431 +07:00 [INF] Executed action HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService.GetListAllAsync (HieuEcommerce.Admin.Application) in 62.8ms
+2023-09-02 01:17:08.431 +07:00 [INF] Executed endpoint 'HieuEcommerce.Admin.ProductCategories.ProductCategoriesAppService.GetListAllAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 01:17:08.432 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 01:17:08.432 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/app/product-categories/all - - - 200 - application/json;+charset=utf-8 69.7359ms
+2023-09-02 01:17:08.444 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 01:17:08.445 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Application.Dtos.PagedResultDto`1[[HieuEcommerce.Admin.Products.ProductInListDto, HieuEcommerce.Admin.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-02 01:17:08.445 +07:00 [INF] Executed action HieuEcommerce.Admin.Products.ProductAppService.GetListFilterAsync (HieuEcommerce.Admin.Application) in 80.1035ms
+2023-09-02 01:17:08.445 +07:00 [INF] Executed endpoint 'HieuEcommerce.Admin.Products.ProductAppService.GetListFilterAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 01:17:08.445 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 01:17:08.445 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/app/product/filter?skipCount=0&maxResultCount=10 - - - 200 - application/json;+charset=utf-8 83.2471ms
+2023-09-02 01:17:15.096 +07:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/app/product/filter?skipCount=0&maxResultCount=10 - -
+2023-09-02 01:17:15.096 +07:00 [INF] CORS policy execution successful.
+2023-09-02 01:17:15.098 +07:00 [INF] Executing endpoint 'HieuEcommerce.Admin.Products.ProductAppService.GetListFilterAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 01:17:15.098 +07:00 [INF] Route matched with {action = "GetListFilter", controller = "Product", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.Application.Dtos.PagedResultDto`1[HieuEcommerce.Admin.Products.ProductInListDto]] GetListFilterAsync(HieuEcommerce.Admin.Products.ProductListFilterDto) on controller HieuEcommerce.Admin.Products.ProductAppService (HieuEcommerce.Admin.Application).
+2023-09-02 01:17:15.117 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 01:17:15.117 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Application.Dtos.PagedResultDto`1[[HieuEcommerce.Admin.Products.ProductInListDto, HieuEcommerce.Admin.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-02 01:17:15.117 +07:00 [INF] Executed action HieuEcommerce.Admin.Products.ProductAppService.GetListFilterAsync (HieuEcommerce.Admin.Application) in 19.1443ms
+2023-09-02 01:17:15.117 +07:00 [INF] Executed endpoint 'HieuEcommerce.Admin.Products.ProductAppService.GetListFilterAsync (HieuEcommerce.Admin.Application)'
+2023-09-02 01:17:15.117 +07:00 [DBG] Added 0 entity changes to the current audit log
+2023-09-02 01:17:15.118 +07:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/app/product/filter?skipCount=0&maxResultCount=10 - - - 200 - application/json;+charset=utf-8 21.5147ms
