@@ -1,4 +1,8 @@
 ﻿using AutoMapper;
+using HieuEcommerce.Admin.ProductCategories;
+using HieuEcommerce.Admin.Products;
+using HieuEcommerce.ProductCategories;
+using HieuEcommerce.Products;
 
 namespace HieuEcommerce.Admin;
 
@@ -6,8 +10,14 @@ public class HieuEcommerceAdminApplicationAutoMapperProfile : Profile
 {
     public HieuEcommerceAdminApplicationAutoMapperProfile()
     {
-        /* You can configure your AutoMapper mapping configuration here.
-         * Alternatively, you can split your mapping configurations
-         * into multiple profile classes for a better organization. */
+        //PRODUCT CATEGORY
+       CreateMap<ProductCategory, ProductCategoryDto>();
+       CreateMap<ProductCategory, ProductCategoryInListDto>();
+       CreateMap<CreateUpdateProductCategoryDto, ProductCategory>();
+        //PRODUCT
+        CreateMap<Product, ProductDto>();
+        CreateMap<Product, ProductInListDto>();
+        CreateMap<CreateUpdateProductDto, Product>();
+
     }
 }
