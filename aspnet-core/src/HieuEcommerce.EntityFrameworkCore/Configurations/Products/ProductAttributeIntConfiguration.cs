@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HieuEcommerce.Configurations.Products
+namespace HieuEcommerce.Products
 {
     public class ProductAttributeIntConfiguration : IEntityTypeConfiguration<ProductAttributeInt>
     {

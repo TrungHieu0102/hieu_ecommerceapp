@@ -16,6 +16,7 @@ export class ProductComponent implements OnInit, OnDestroy {
   private ngUnsubscribe = new Subject<void>();
   blockedPanel: boolean = false;
   items: ProductInListDto[] = [];
+  public selectedItems: ProductInListDto []=[];
 
   //Paging variables
   public skipCount: number = 0;
@@ -68,7 +69,7 @@ export class ProductComponent implements OnInit, OnDestroy {
       response.forEach(element => {
         this.productCategories.push({
           value: element.id,
-          name: element.name,
+          label: element.name,
         });
       });
     });
@@ -86,6 +87,29 @@ export class ProductComponent implements OnInit, OnDestroy {
     ref.onClose.subscribe((data: ProductDto)=>{
       if (data){
         this.loadData();
+        this.notificationService.showSuccess("Thêm sản phẩm thành công");
+        this.selectedItems=[];
+      }
+    })
+  }
+  showEditModal(){
+    if(this.selectedItems.length==0){
+      this.notificationService.showError("Bạn phải chọn một bản ghi");
+      return;
+    }
+    const id = this.selectedItems[0].id;
+    const ref = this.dialogService.open(ProductDetailComponent,{
+      data:{
+        id :id
+      },
+      header:'Cập nhật  sản phẩm',
+      width: '70%',
+    });
+    ref.onClose.subscribe((data: ProductDto)=>{
+      if (data){
+
+        this.loadData();
+        this.selectedItems=[];
         this.notificationService.showSuccess("Thêm sản phẩm thành công");
       }
     })

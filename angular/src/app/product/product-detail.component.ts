@@ -1,9 +1,9 @@
-import { PagedResultDto } from '@abp/ng.core';
+
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ManufacturerInListDto, ManufacturersService } from '@proxy/manufacturers';
 import { ProductCategoriesService, ProductCategoryInListDto } from '@proxy/product-categories';
-import { ProductDto, ProductInListDto, ProductService } from '@proxy/products';
+import { ProductDto,  ProductService } from '@proxy/products';
 import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { Subject, forkJoin, takeUntil } from 'rxjs';
 import { UtilityService } from '../shared/services/utility.service';
@@ -53,6 +53,12 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.buildForm();
     this.loadProductTypes();
+    this.initFormData(); 
+  }
+  generateSlug(){
+    this.form.controls['slug'].setValue(this.utilService.MakeSeoTitle(this.form.get('name').value));
+  }
+  initFormData(){
     //load data to form
     var productCategories = this.productCategoryService.getListAll();
     var manufacturers = this.manufacturersService.getListAll();
@@ -91,7 +97,6 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
         },
       });
   }
-
   loadFormDetails(id: string) {
     this.toggleBlockUI(true);
     this.productService
@@ -108,12 +113,48 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
         },
       });
   }
-  saveChange() {}
+  saveChange() {
+    console.log(this.form.value);
+    console.log(this.config.data);
+    this.toggleBlockUI(true);
+    if(this.utilService.isEmpty(this.config.data?.id)==true){
+      this.productService
+      .create(this.form.value)
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe({
+        next:()=>{
+          this.toggleBlockUI(false);
+          this.ref.close(this.form.value);
+        
+        },
+        error:()=>{
+          this.toggleBlockUI(false);
+        }
+        
+      });
+    } 
+    else{
+      this.productService
+      .update(this.config.data.id,this.form.value)
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe({
+        next:()=>{
+          this.toggleBlockUI(false);
+          this.ref.close(this.form.value);
+         
+        },
+        error:()=>{
+          this.toggleBlockUI(false);
+        }
+        
+      });
+    }
+  }
   loadProductTypes() {
     productTypeOptions.forEach(element => {
       this.productTypes.push({
         value: element.value,
-        name: element.key,
+        label: element.key,
       });
     });
   }

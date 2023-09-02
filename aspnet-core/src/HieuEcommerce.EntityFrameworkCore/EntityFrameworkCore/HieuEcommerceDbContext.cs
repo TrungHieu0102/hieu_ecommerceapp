@@ -1,12 +1,6 @@
 ﻿
-using HieuEcommerce.Configurations.Inventories;
-using HieuEcommerce.Configurations.InventoryTickets;
-using HieuEcommerce.Configurations.Manufacturers;
-using HieuEcommerce.Configurations.Orders;
-using HieuEcommerce.Configurations.ProductAttributes;
-using HieuEcommerce.Configurations.ProductCategories;
-using HieuEcommerce.Configurations.Products;
-using HieuEcommerce.Configurations.Promotions;
+
+using HieuEcommerce.Promotions;
 using HieuEcommerce.Inventories;
 using HieuEcommerce.InventoryTickets;
 using HieuEcommerce.Manufacturers;

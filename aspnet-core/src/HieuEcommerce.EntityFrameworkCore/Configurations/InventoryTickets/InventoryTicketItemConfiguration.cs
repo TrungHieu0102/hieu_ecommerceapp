@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HieuEcommerce.Configurations.InventoryTickets
+namespace HieuEcommerce.InventoryTickets
 {
     public class InventoryTicketItemConfiguration : IEntityTypeConfiguration<InventoryTicketItem>
     {

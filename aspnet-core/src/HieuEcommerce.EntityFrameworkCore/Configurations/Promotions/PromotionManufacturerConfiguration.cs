@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HieuEcommerce.Configurations.Promotions
+namespace HieuEcommerce.Promotions
 {
     public class PromotionManufacturerConfiguration : IEntityTypeConfiguration<PromotionManufacturer>
     {

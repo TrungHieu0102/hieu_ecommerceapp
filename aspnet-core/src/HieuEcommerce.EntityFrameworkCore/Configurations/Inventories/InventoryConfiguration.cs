@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HieuEcommerce.Configurations.Inventories
+namespace HieuEcommerce.Inventories
 {
     public class InventoryConfiguration : IEntityTypeConfiguration<Inventory>
     {
