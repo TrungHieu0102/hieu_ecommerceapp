@@ -22,5 +22,6 @@ namespace HieuEcommerce.Products
         public string SeoMetaDescription { get; set; }
         public string Description { get; set; }
         public string ThumbnailPicture { get; set; }
+        public double sellPrice { get; set; }
     }
 }

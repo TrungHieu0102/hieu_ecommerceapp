@@ -11,6 +11,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\HieuEcommerce.EntityFrameworkCore\HieuEcommerce.EntityFrameworkCore.csproj" />
     <ProjectReference Include="..\HieuEcommerce.TestBase\HieuEcommerce.TestBase.csproj" />
+    <PackageReference Include="Microsoft.AspNet.Cors" Version="5.2.9" />
     <PackageReference Include="Volo.Abp.EntityFrameworkCore.Sqlite" Version="7.3.2" />
   </ItemGroup>
 

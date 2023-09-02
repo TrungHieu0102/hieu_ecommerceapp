@@ -594,6 +594,9 @@ namespace HieuEcommerce.Migrations
                     b.Property<bool>("Visiblity")
                         .HasColumnType("bit");
 
+                    b.Property<double>("sellPrice")
+                        .HasColumnType("float");
+
                     b.HasKey("Id");
 
                     b.ToTable("AppProducts", (string)null);

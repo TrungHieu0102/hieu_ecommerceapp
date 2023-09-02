@@ -10,9 +10,17 @@ import { ButtonModule } from 'primeng/button';
 import {DropdownModule} from 'primeng/dropdown';
 import {InputTextModule} from 'primeng/inputtext';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { DynamicDialogModule } from 'primeng/dynamicdialog';
+import { ProductDetailComponent } from './product-detail.component';
+import {InputNumberModule} from 'primeng/inputnumber';
+import {CheckboxModule} from 'primeng/checkbox';
+import {InputTextareaModule} from 'primeng/inputtextarea';
+import {EditorModule} from 'primeng/editor';
+import { HieuSharedMudule } from '../shared/modules/hieu-shared.module';
+
 
 @NgModule({
-  declarations: [ProductComponent],
+  declarations: [ProductComponent, ProductDetailComponent],
   imports: [
     SharedModule,
     ProductRoutingModule,
@@ -23,7 +31,15 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
     ButtonModule,
     DropdownModule,
     ProgressSpinnerModule,
-    InputTextModule
+    InputTextModule,
+    DynamicDialogModule,
+    InputNumberModule,
+    CheckboxModule,
+    InputTextareaModule,
+    EditorModule,
+    HieuSharedMudule
   ],
+ 
+ 
 })
 export class ProductModule {}

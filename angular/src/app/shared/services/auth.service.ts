@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-
 import { LoginRequestDto } from '../models/login-request.dto';
 import { LoginResponseDto } from '../models/login-response.dto';
 import { ACCESS_TOKEN, REFRESH_TOKEN } from '../constans/keys.const';

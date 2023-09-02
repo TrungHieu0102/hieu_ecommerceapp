@@ -17,8 +17,7 @@ namespace HieuEcommerce.Admin.Products
         public int SortOrder { get; set; }
         public bool Visiblity { get; set; }
         public bool IsActive { get; set; }
-        public Guid CategoryId { get; set; }
-       
+        public Guid CategoryId { get; set; }      
         public string ThumbnailPicture { get; set; }
     }
 }
