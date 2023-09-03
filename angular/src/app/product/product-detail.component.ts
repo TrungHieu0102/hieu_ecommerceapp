@@ -7,7 +7,7 @@ import { ProductDto,  ProductService } from '@proxy/products';
 import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { Subject, forkJoin, takeUntil } from 'rxjs';
 import { UtilityService } from '../shared/services/utility.service';
-import { productTypeOptions } from '@proxy/hieu-ecommerce/products';
+import { ProductType, productTypeOptions } from '@proxy/hieu-ecommerce/products';
 
 @Component({
   selector: 'app-product-detail',
@@ -114,8 +114,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
       });
   }
   saveChange() {
-    console.log(this.form.value);
-    console.log(this.config.data);
+  
     this.toggleBlockUI(true);
     if(this.utilService.isEmpty(this.config.data?.id)==true){
       this.productService
@@ -176,7 +175,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
       productType: new FormControl(this.selectedEntity.productType || null, Validators.required),
       sortOrder: new FormControl(this.selectedEntity.sortOrder || null, Validators.required),
       sellPrice: new FormControl(this.selectedEntity.sellPrice || null, Validators.required),
-      visiblity: new FormControl(this.selectedEntity.visiblity || true),
+      visibility: new FormControl(this.selectedEntity.visibility || true),
       isActive: new FormControl(this.selectedEntity.isActive || true),
       seoMetaDescription: new FormControl(this.selectedEntity.seoMetaDescription || null),
       description: new FormControl(this.selectedEntity.description || null),

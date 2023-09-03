@@ -17,6 +17,7 @@ import {CheckboxModule} from 'primeng/checkbox';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import {EditorModule} from 'primeng/editor';
 import { HieuSharedMudule } from '../shared/modules/hieu-shared.module';
+import {BadgeModule} from 'primeng/badge';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { HieuSharedMudule } from '../shared/modules/hieu-shared.module';
     CheckboxModule,
     InputTextareaModule,
     EditorModule,
-    HieuSharedMudule
+    HieuSharedMudule,
+    BadgeModule
   ],
  
  

@@ -8,7 +8,6 @@ using HieuEcommerce.Orders;
 using HieuEcommerce.ProductAttributes;
 using HieuEcommerce.ProductCategories;
 using HieuEcommerce.Products;
-using HieuEcommerce.Promotions;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;

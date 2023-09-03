@@ -6,6 +6,7 @@ import { DialogService } from 'primeng/dynamicdialog';
 import { Subject, takeUntil } from 'rxjs';
 import { ProductDetailComponent } from './product-detail.component';
 import { NotificationService } from '../shared/services/notification.service';
+import { ProductType } from '@proxy/hieu-ecommerce/products';
 
 @Component({
   selector: 'app-product',
@@ -114,6 +115,9 @@ export class ProductComponent implements OnInit, OnDestroy {
       }
     })
   }
+  getProductTypeName(value: number){
+    return ProductType[value];
+   }
   private toggleBlockUI(enabled: boolean) {
     if (enabled == true) {
       this.blockedPanel = true;

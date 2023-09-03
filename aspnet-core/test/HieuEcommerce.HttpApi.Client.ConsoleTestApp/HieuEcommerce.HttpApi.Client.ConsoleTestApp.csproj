@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -20,7 +20,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNet.Cors" Version="5.2.9" />
     <PackageReference Include="Volo.Abp.Http.Client.IdentityModel" Version="7.3.2" />
     <PackageReference Include="Volo.Abp.Autofac" Version="7.3.2" />
     <ProjectReference Include="..\..\src\HieuEcommerce.HttpApi.Client\HieuEcommerce.HttpApi.Client.csproj" />

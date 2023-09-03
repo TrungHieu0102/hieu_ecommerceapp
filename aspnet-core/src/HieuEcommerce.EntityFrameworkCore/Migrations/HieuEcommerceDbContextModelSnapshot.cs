@@ -132,7 +132,6 @@ namespace HieuEcommerce.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("BatchNumber")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .IsUnicode(false)
                         .HasColumnType("varchar(50)");
@@ -178,11 +177,9 @@ namespace HieuEcommerce.Migrations
                         .HasColumnName("ConcurrencyStamp");
 
                     b.Property<string>("Country")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CoverPicture")
-                        .IsRequired()
                         .HasMaxLength(250)
                         .HasColumnType("nvarchar(250)");
 
@@ -363,7 +360,6 @@ namespace HieuEcommerce.Migrations
                         .HasColumnName("CreatorId");
 
                     b.Property<string>("Note")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("OrderId")
@@ -427,7 +423,6 @@ namespace HieuEcommerce.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Note")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("SortOrder")
@@ -459,7 +454,6 @@ namespace HieuEcommerce.Migrations
                         .HasColumnName("ConcurrencyStamp");
 
                     b.Property<string>("CoverPicture")
-                        .IsRequired()
                         .HasMaxLength(250)
                         .HasColumnType("nvarchar(250)");
 
@@ -487,7 +481,6 @@ namespace HieuEcommerce.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("SeoMetaDescription")
-                        .IsRequired()
                         .HasMaxLength(250)
                         .HasColumnType("nvarchar(250)");
 
@@ -516,6 +509,14 @@ namespace HieuEcommerce.Migrations
                     b.Property<Guid>("CategoryId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("CategoryName")
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
+
+                    b.Property<string>("CategorySlug")
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
+
                     b.Property<string>("Code")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -537,7 +538,6 @@ namespace HieuEcommerce.Migrations
                         .HasColumnName("CreatorId");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ExtraProperties")
@@ -573,7 +573,6 @@ namespace HieuEcommerce.Migrations
                         .HasColumnType("varchar(50)");
 
                     b.Property<string>("SeoMetaDescription")
-                        .IsRequired()
                         .HasMaxLength(250)
                         .HasColumnType("nvarchar(250)");
 
@@ -587,11 +586,10 @@ namespace HieuEcommerce.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("ThumbnailPicture")
-                        .IsRequired()
                         .HasMaxLength(250)
                         .HasColumnType("nvarchar(250)");
 
-                    b.Property<bool>("Visiblity")
+                    b.Property<bool>("Visibility")
                         .HasColumnType("bit");
 
                     b.Property<double>("sellPrice")
@@ -671,7 +669,6 @@ namespace HieuEcommerce.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Value")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -691,7 +688,6 @@ namespace HieuEcommerce.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Value")
-                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
@@ -719,7 +715,6 @@ namespace HieuEcommerce.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Content")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreationTime")
