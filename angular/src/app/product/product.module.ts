@@ -18,6 +18,7 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
 import {EditorModule} from 'primeng/editor';
 import { HieuSharedMudule } from '../shared/modules/hieu-shared.module';
 import {BadgeModule} from 'primeng/badge';
+import {ImageModule} from 'primeng/image';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import {BadgeModule} from 'primeng/badge';
     InputTextareaModule,
     EditorModule,
     HieuSharedMudule,
-    BadgeModule
+    BadgeModule,
+    ImageModule
   ],
  
  
