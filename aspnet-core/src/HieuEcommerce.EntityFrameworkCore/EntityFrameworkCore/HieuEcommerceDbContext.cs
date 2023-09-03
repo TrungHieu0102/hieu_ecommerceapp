@@ -22,6 +22,7 @@ using Volo.Abp.PermissionManagement.EntityFrameworkCore;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
+using HieuEcommerce.IdentitySettings;
 
 namespace HieuEcommerce.EntityFrameworkCore;
 
@@ -87,6 +88,7 @@ public class HieuEcommerceDbContext :
     public DbSet<PromotionManufacturer> PromotionManufacturers { get; set; }
     public DbSet<PromotionProduct> PromotionProducts { get; set; }
     public DbSet<PromotionUsageHistory> PromotionUsageHistories { get; set; }
+    public DbSet<IdentitySetting> IdentitySettings { get; set; }
 
 
     #endregion
@@ -144,6 +146,8 @@ public class HieuEcommerceDbContext :
         builder.ApplyConfiguration(new PromotionManufacturerConfiguration());
         builder.ApplyConfiguration(new PromotionProductConfiguration());
         builder.ApplyConfiguration(new PromotionUsageHistoryConfiguration());
+        builder.ApplyConfiguration(new IdentitySettingConfiguration());
+
 
         //builder.Entity<YourEntity>(b =>
         //{

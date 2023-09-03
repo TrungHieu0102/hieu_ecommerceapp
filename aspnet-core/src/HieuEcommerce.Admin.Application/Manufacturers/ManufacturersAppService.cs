@@ -1,4 +1,5 @@
 ﻿using HieuEcommerce.Manufacturers;
+using Microsoft.AspNetCore.Authorization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,10 @@ using Volo.Abp.Domain.Repositories;
 
 namespace HieuEcommerce.Admin.Manufacturers
 {
+    [Authorize]
     public class ManufacturersAppService : CrudAppService<
        Manufacturer,
-       ManufacturerDto,
+       ManufacturerDto, 
        Guid,
        PagedResultRequestDto,
        CreateUpdateManufacturerDto,

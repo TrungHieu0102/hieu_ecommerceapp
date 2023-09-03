@@ -27,16 +27,17 @@ namespace HieuEcommerce.Admin.Products
         private readonly ProductManager _productManager;
         private readonly IRepository<ProductCategory> _productCategoryRepository;
         private readonly IBlobContainer<ProductThumbnailPictureContainer> _fileContainer;
-
+        private readonly ProductCodeGenerator _productCodeGenerator;
         public ProductAppService(IRepository<Product, Guid> repository, ProductManager productManager,
             IRepository<ProductCategory> productCategoryRepository,
-            IBlobContainer<ProductThumbnailPictureContainer> fileContainer)
+            IBlobContainer<ProductThumbnailPictureContainer> fileContainer,
+            ProductCodeGenerator productCodeGenerator)
             : base(repository)
         {
             _productManager = productManager;
             _productCategoryRepository = productCategoryRepository;
             _fileContainer = fileContainer;
-
+            _productCodeGenerator = productCodeGenerator;
         }
         public override async Task<ProductDto> CreateAsync(CreateUpdateProductDto input)
         {
@@ -135,6 +136,11 @@ namespace HieuEcommerce.Admin.Products
             }
             var result = Convert.ToBase64String(thumbnailContent);
             return result;
+        }
+
+        public async Task<string> GetSuggestNewCodeAsync()
+        {
+            return await _productCodeGenerator.GenerateAsync();
         }
     }
 }
