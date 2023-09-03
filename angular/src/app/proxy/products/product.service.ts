@@ -61,13 +61,13 @@ export class ProductService {
     { apiName: this.apiName,...config });
   
 
-  getListFilter = (input: ProductListFilterDto, config?: Partial<Rest.Config>) =>
+    getListFilter = (input: ProductListFilterDto) =>
     this.restService.request<any, PagedResultDto<ProductInListDto>>({
       method: 'GET',
       url: '/api/app/product/filter',
       params: { categoryId: input.categoryId, keyword: input.keyword, skipCount: input.skipCount, maxResultCount: input.maxResultCount },
     },
-    { apiName: this.apiName,...config });
+    { apiName: this.apiName });
   
 
   getSuggestNewCode = (config?: Partial<Rest.Config>) =>
