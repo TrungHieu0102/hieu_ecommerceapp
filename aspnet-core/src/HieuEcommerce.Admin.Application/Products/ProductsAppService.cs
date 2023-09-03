@@ -1,5 +1,6 @@
 ﻿using HieuEcommerce.ProductCategories;
 using HieuEcommerce.Products;
+using Microsoft.AspNetCore.Authorization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,9 @@ using Volo.Abp.BlobStoring;
 using Volo.Abp.Domain.Repositories;
 
 namespace HieuEcommerce.Admin.Products
+   
 {
+    [Authorize]
     public class ProductAppService : CrudAppService<
        Product,
        ProductDto,
