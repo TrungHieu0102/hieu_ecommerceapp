@@ -1,6 +1,6 @@
 import { PagedResultDto } from '@abp/ng.core';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ProductAttributeDto, ProductAttributeInListDto, ProductAttributesService } from '@proxy/product-attributes';
+import { ProductAttributeDto, ProductAttributeInListDto, ProductAttributesService } from '@proxy/catalog/product-attributes';
 import { DialogService } from 'primeng/dynamicdialog';
 import { Subject, takeUntil } from 'rxjs';
 import { AttributeDetailComponent } from './attribute-detail.component';

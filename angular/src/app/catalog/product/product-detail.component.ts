@@ -1,14 +1,15 @@
 import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { ManufacturerInListDto, ManufacturersService } from '@proxy/manufacturers';
-import { ProductCategoriesService, ProductCategoryInListDto } from '@proxy/product-categories';
-import { ProductDto, ProductService } from '@proxy/products';
+
 import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { Subject, forkJoin, takeUntil } from 'rxjs';
 import { UtilityService } from '../../shared/services/utility.service';
 import { ProductType, productTypeOptions } from '@proxy/hieu-ecommerce/products';
 import { NotificationService } from '../../shared/services/notification.service';
 import { DomSanitizer } from '@angular/platform-browser';
+import { ProductDto, ProductService } from '@proxy/catalog/products';
+import { ProductCategoriesService, ProductCategoryInListDto } from '@proxy/catalog/product-categories';
+import { ManufacturerInListDto, ManufacturersService } from '@proxy/catalog/manufacturers';
 
 @Component({
   selector: 'app-product-detail',

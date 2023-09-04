@@ -1,11 +1,12 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { ProductAttributeDto, ProductAttributesService } from '@proxy/product-attributes';
+
 import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { Subject, takeUntil } from 'rxjs';
 import { UtilityService } from '../../shared/services/utility.service';
 import { NotificationService } from '../../shared/services/notification.service';
 import { attributeTypeOptions } from '@proxy/hieu-ecommerce/attributes';
+import { ProductAttributeDto, ProductAttributesService } from '@proxy/catalog/product-attributes';
 
 @Component({
   selector: 'app-attribute-detail',
