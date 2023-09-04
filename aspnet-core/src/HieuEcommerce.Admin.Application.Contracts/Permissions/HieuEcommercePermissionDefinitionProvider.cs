@@ -11,6 +11,8 @@ public class HieuEcommercePermissionDefinitionProvider : PermissionDefinitionPro
         //Catalog
         var catalogGroup = context.AddGroup(HieuEcommercePermissions.CatalogGroupName, L("Permission:Catalog"));
 
+       
+
         //Add product
         var productPermission = catalogGroup.AddPermission(HieuEcommercePermissions.Product.Default, L("Permission:Catalog.Product"));
         productPermission.AddChild(HieuEcommercePermissions.Product.Create, L("Permission:Catalog.Product.Create"));

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Volo.Abp.Account;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Application.Services;
 
@@ -19,6 +20,7 @@ namespace HieuEcommerce.Admin.System.Users
         Task<PagedResultDto<UserInListDto>> GetListWithFilterAsync(BaseListFilterDto input);
 
         Task<List<UserInListDto>> GetListAllAsync(string filterKeyword);
+        Task SetPasswordAsync(Guid userId, SetPasswordDto input);
 
     }
 }
