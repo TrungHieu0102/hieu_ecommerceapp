@@ -20,10 +20,12 @@ import { HieuSharedMudule } from '../shared/modules/hieu-shared.module';
 import {BadgeModule} from 'primeng/badge';
 import {ImageModule} from 'primeng/image';
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import { ProductAttributeComponent } from './product-attribute.component';
+import { CalendarModule } from 'primeng/calendar';
 
 
 @NgModule({
-  declarations: [ProductComponent, ProductDetailComponent],
+  declarations: [ProductComponent, ProductDetailComponent, ProductAttributeComponent],
   imports: [
     SharedModule,
     ProductRoutingModule,
@@ -43,7 +45,8 @@ import {ConfirmDialogModule} from 'primeng/confirmdialog';
     HieuSharedMudule,
     BadgeModule,
     ImageModule,
-    ConfirmDialogModule
+    ConfirmDialogModule,
+    CalendarModule
   ],
  
  

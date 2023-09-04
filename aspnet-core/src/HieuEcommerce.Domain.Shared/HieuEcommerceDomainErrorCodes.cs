@@ -11,4 +11,5 @@ public static class HieuEcommerceDomainErrorCodes
     public const string ProductAttributeIdIsNotExists = "HieuEcommerce:ProductAttributeIdIsNotExists";
 
     public const string ProductAttributeValueIsNotValid = "HieuEcommerce:ProductAttributeValueIsNotValid";
+    public const string RoleNameAlreadyExists = "HieuEcommerce:RoleNameAlreadyExists";
 }

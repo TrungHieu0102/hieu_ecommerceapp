@@ -3,10 +3,13 @@ using HieuEcommerce.Admin.Manufacturers;
 using HieuEcommerce.Admin.ProductAttributes;
 using HieuEcommerce.Admin.ProductCategories;
 using HieuEcommerce.Admin.Products;
+using HieuEcommerce.Admin.Roles;
 using HieuEcommerce.Manufacturers;
 using HieuEcommerce.ProductAttributes;
 using HieuEcommerce.ProductCategories;
 using HieuEcommerce.Products;
+using HieuEcommerce.Roles;
+using Volo.Abp.Identity;
 
 namespace HieuEcommerce.Admin;
 
@@ -30,6 +33,21 @@ public class HieuEcommerceAdminApplicationAutoMapperProfile : Profile
         CreateMap<ProductAttribute, ProductAttributeDto>();
         CreateMap<ProductAttribute, ProductAttributeInListDto>();
         CreateMap<CreateUpdateProductAttributeDto, ProductAttribute>();
-
+        //Roles
+        CreateMap<IdentityRole, RoleDto>().ForMember(x => x.Description,
+            map => map.MapFrom(x => x.ExtraProperties.ContainsKey(RoleConsts.DescriptionFieldName)
+            ?
+            x.ExtraProperties[RoleConsts.DescriptionFieldName]
+            :
+            null));
+        CreateMap<IdentityRole, RoleInListDto>().ForMember(x => x.Description,
+            map => map.MapFrom(x => x.ExtraProperties.ContainsKey(RoleConsts.DescriptionFieldName)
+            ?
+            x.ExtraProperties[RoleConsts.DescriptionFieldName]
+            :
+            null));
+        CreateMap<CreateUpdateRoleDto, IdentityRole>();
     }
+
 }
+ 

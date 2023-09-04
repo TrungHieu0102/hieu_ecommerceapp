@@ -62,13 +62,13 @@ export class ProductAttributesService {
     { apiName: this.apiName,...config });
   
 
-    getListFilter = (input: BaseListFilterDto) =>
+  getListFilter = (input: BaseListFilterDto, config?: Partial<Rest.Config>) =>
     this.restService.request<any, PagedResultDto<ProductAttributeInListDto>>({
       method: 'GET',
       url: '/api/app/product-attributes/filter',
-      params: { skipCount: input.skipCount, maxResultCount: input.maxResultCount, keyword: input.keyword },
+      params: { keyword: input.keyword, skipCount: input.skipCount, maxResultCount: input.maxResultCount },
     },
-    { apiName: this.apiName });
+    { apiName: this.apiName,...config });
   
 
   update = (id: string, input: CreateUpdateProductAttributeDto, config?: Partial<Rest.Config>) =>
