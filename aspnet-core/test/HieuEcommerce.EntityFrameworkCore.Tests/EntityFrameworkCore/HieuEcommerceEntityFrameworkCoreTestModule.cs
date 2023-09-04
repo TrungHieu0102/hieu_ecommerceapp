@@ -20,7 +20,7 @@ namespace HieuEcommerce.EntityFrameworkCore;
     )]
 public class HieuEcommerceEntityFrameworkCoreTestModule : AbpModule
 {
-    private SqliteConnection? _sqliteConnection;
+    private SqliteConnection _sqliteConnection;
 
     public override void ConfigureServices(ServiceConfigurationContext context)
     {

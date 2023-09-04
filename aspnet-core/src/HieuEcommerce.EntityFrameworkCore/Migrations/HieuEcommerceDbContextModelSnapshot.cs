@@ -635,7 +635,7 @@ namespace HieuEcommerce.Migrations
                     b.Property<Guid>("ProductId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime>("Value")
+                    b.Property<DateTime?>("Value")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
