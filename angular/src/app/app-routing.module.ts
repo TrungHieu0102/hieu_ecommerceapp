@@ -12,19 +12,19 @@ const routes: Routes = [
   {
     path: 'product',
    
-    loadChildren: () => import('./product/product.module').then(m => m.ProductModule),
+    loadChildren: () => import('./catalog/product/product.module').then(m => m.ProductModule),
     component: AppLayoutComponent
     
   },
   {
     path: 'role',
-    loadChildren: () => import('./role/role.module').then(m => m.RoleModule),
+    loadChildren: () => import('./system/role/role.module').then(m => m.RoleModule),
     component: AppLayoutComponent
   },
   {
     path: 'attribute',
    
-    loadChildren: () => import('./attribute/attribute.module').then(m => m.AttributeModule),
+    loadChildren: () => import('./catalog/attribute/attribute.module').then(m => m.AttributeModule),
     component: AppLayoutComponent
     
   },

@@ -1,9 +1,10 @@
 ﻿using AutoMapper;
-using HieuEcommerce.Admin.Manufacturers;
-using HieuEcommerce.Admin.ProductAttributes;
-using HieuEcommerce.Admin.ProductCategories;
-using HieuEcommerce.Admin.Products;
-using HieuEcommerce.Admin.Roles;
+using HieuEcommerce.Admin.Catalog.Manufacturers;
+using HieuEcommerce.Admin.Catalog.ProductAttributes;
+using HieuEcommerce.Admin.Catalog.ProductCategories;
+using HieuEcommerce.Admin.Catalog.Products;
+using HieuEcommerce.Admin.System.Roles;
+using HieuEcommerce.Admin.System.Users;
 using HieuEcommerce.Manufacturers;
 using HieuEcommerce.ProductAttributes;
 using HieuEcommerce.ProductCategories;
@@ -47,6 +48,9 @@ public class HieuEcommerceAdminApplicationAutoMapperProfile : Profile
             :
             null));
         CreateMap<CreateUpdateRoleDto, IdentityRole>();
+        //User
+        CreateMap<IdentityUser, UserDto>();
+        CreateMap<IdentityUser, UserInListDto>();
     }
 
 }

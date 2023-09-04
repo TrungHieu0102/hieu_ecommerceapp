@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -29,6 +29,8 @@ using Volo.Abp.Modularity;
 using Volo.Abp.Swashbuckle;
 using Volo.Abp.VirtualFileSystem;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Localization;
+using System.Globalization;
 
 namespace HieuEcommerce.Admin;
 
@@ -54,6 +56,7 @@ public class HieuEcommerceAdminHttpApiHostModule : AbpModule
         ConfigureAuthentication(context, configuration);
         ConfigureCache(configuration);
         ConfigureVirtualFileSystem(context);
+        ConfigureLocalization();
         ConfigureDataProtection(context, configuration, hostingEnvironment);
         ConfigureDistributedLocking(context, configuration);
         ConfigureCors(context, configuration);
@@ -128,6 +131,15 @@ public class HieuEcommerceAdminHttpApiHostModule : AbpModule
                 options.CustomSchemaIds(type => type.FullName);
             });
     }
+    private void ConfigureLocalization()
+    {
+        Configure<AbpLocalizationOptions>(options =>
+        {
+            options.Languages.Add(new LanguageInfo("en", "en", "English"));
+            options.Languages.Add(new LanguageInfo("vi", "vn", "Tiếng Việt"));
+
+        });
+    }
 
     private void ConfigureDataProtection(
         ServiceConfigurationContext context,
@@ -184,7 +196,27 @@ public class HieuEcommerceAdminHttpApiHostModule : AbpModule
             app.UseDeveloperExceptionPage();
         }
 
-        app.UseAbpRequestLocalization();
+        if (env.IsDevelopment())
+        {
+            app.UseDeveloperExceptionPage();
+        }
+
+        var supportedCultures = new[]
+         {
+                new CultureInfo("vi")
+            };
+
+        app.UseAbpRequestLocalization(options =>
+        {
+            options.DefaultRequestCulture = new RequestCulture("vi");
+            options.SupportedCultures = supportedCultures;
+            options.SupportedUICultures = supportedCultures;
+            options.RequestCultureProviders = new List<IRequestCultureProvider>
+                {
+                    new QueryStringRequestCultureProvider(),
+                    new CookieRequestCultureProvider()
+                };
+        });
         app.UseCorrelationId();
         app.UseStaticFiles();
         app.UseRouting();

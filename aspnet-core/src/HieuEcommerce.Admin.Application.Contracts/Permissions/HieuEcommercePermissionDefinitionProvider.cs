@@ -8,9 +8,21 @@ public class HieuEcommercePermissionDefinitionProvider : PermissionDefinitionPro
 {
     public override void Define(IPermissionDefinitionContext context)
     {
-        var myGroup = context.AddGroup(HieuEcommercePermissions.GroupName);
-        //Define your own permissions here. Example:
-        //myGroup.AddPermission(HieuEcommercePermissions.MyPermission1, L("Permission:MyPermission1"));
+        //Catalog
+        var catalogGroup = context.AddGroup(HieuEcommercePermissions.CatalogGroupName, L("Permission:Catalog"));
+
+        //Add product
+        var productPermission = catalogGroup.AddPermission(HieuEcommercePermissions.Product.Default, L("Permission:Catalog.Product"));
+        productPermission.AddChild(HieuEcommercePermissions.Product.Create, L("Permission:Catalog.Product.Create"));
+        productPermission.AddChild(HieuEcommercePermissions.Product.Update, L("Permission:Catalog.Product.Update"));
+        productPermission.AddChild(HieuEcommercePermissions.Product.Delete, L("Permission:Catalog.Product.Delete"));
+        productPermission.AddChild(HieuEcommercePermissions.Product.AttributeManage, L("Permission:Catalog.Product.AttributeManage"));
+
+        //Add attribute
+        var attributePermission = catalogGroup.AddPermission(HieuEcommercePermissions.Attribute.Default, L("Permission:Catalog.Attribute"));
+        attributePermission.AddChild(HieuEcommercePermissions.Attribute.Create, L("Permission:Catalog.Attribute.Create"));
+        attributePermission.AddChild(HieuEcommercePermissions.Attribute.Update, L("Permission:Catalog.Attribute.Update"));
+        attributePermission.AddChild(HieuEcommercePermissions.Attribute.Delete, L("Permission:Catalog.Attribute.Delete"));
     }
 
     private static LocalizableString L(string name)
