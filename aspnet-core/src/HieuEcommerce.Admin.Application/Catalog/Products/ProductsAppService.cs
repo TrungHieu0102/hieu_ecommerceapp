@@ -1,4 +1,5 @@
 ﻿using HieuEcommerce.Admin.Catalog.Products.Attributes;
+using HieuEcommerce.Admin.Permissions;
 using HieuEcommerce.Attributes;
 using HieuEcommerce.ProductAttributes;
 using HieuEcommerce.ProductCategories;
@@ -18,7 +19,7 @@ using Volo.Abp.Domain.Repositories;
 namespace HieuEcommerce.Admin.Catalog.Products
 
 {
-    [Authorize]
+    [Authorize(HieuEcommercePermissions.Product.Default, Policy = "AdminOnly")]
     public class ProductAppService : CrudAppService<
        Product,
        ProductDto,
@@ -48,6 +49,8 @@ namespace HieuEcommerce.Admin.Catalog.Products
               IRepository<ProductAttributeDecimal> productAttributeDecimalRepository,
               IRepository<ProductAttributeVarchar> productAttributeVarcharRepository,
               IRepository<ProductAttributeText> productAttributeTextRepository
+
+
             )
             : base(repository)
         {
@@ -61,7 +64,13 @@ namespace HieuEcommerce.Admin.Catalog.Products
             _productAttributeDecimalRepository = productAttributeDecimalRepository;
             _productAttributeVarcharRepository = productAttributeVarcharRepository;
             _productAttributeTextRepository = productAttributeTextRepository;
+            GetPolicyName = HieuEcommercePermissions.Product.Default;
+            GetListPolicyName = HieuEcommercePermissions.Product.Default;
+            CreatePolicyName = HieuEcommercePermissions.Product.Create;
+            UpdatePolicyName = HieuEcommercePermissions.Product.Update;
+            DeletePolicyName = HieuEcommercePermissions.Product.Delete;
         }
+        [Authorize(HieuEcommercePermissions.Product.Update)]
         public override async Task<ProductDto> CreateAsync(CreateUpdateProductDto input)
         {
             var product = await _productManager.CreateAsync(input.ManufacturerId, input.Name, input.Code, input.Slug, input.ProductType, input.SKU,
@@ -75,6 +84,7 @@ namespace HieuEcommerce.Admin.Catalog.Products
 
             return ObjectMapper.Map<Product, ProductDto>(result);
         }
+        [Authorize(HieuEcommercePermissions.Product.Update)]
         public override async Task<ProductDto> UpdateAsync(Guid id, CreateUpdateProductDto input)
         {
             var product = await Repository.GetAsync(id);
@@ -109,12 +119,13 @@ namespace HieuEcommerce.Admin.Catalog.Products
 
             return ObjectMapper.Map<Product, ProductDto>(product);
         }
+        [Authorize(HieuEcommercePermissions.Product.Delete)]
         public async Task DeleteMultipleAsync(IEnumerable<Guid> ids)
         {
             await Repository.DeleteManyAsync(ids);
             await UnitOfWorkManager.Current.SaveChangesAsync();
         }
-
+        [Authorize(HieuEcommercePermissions.Product.Default)]
         public async Task<List<ProductInListDto>> GetListAllAsync()
         {
             var query = await Repository.GetQueryableAsync();
@@ -122,7 +133,7 @@ namespace HieuEcommerce.Admin.Catalog.Products
             var data = await AsyncExecuter.ToListAsync(query);
             return ObjectMapper.Map<List<Product>, List<ProductInListDto>>(data);
         }
-
+        [Authorize(HieuEcommercePermissions.Product.Default)]
         public async Task<PagedResultDto<ProductInListDto>> GetListFilterAsync(ProductListFilterDto input)
         {
             var query = await Repository.GetQueryableAsync();
@@ -137,6 +148,7 @@ namespace HieuEcommerce.Admin.Catalog.Products
 
             return new PagedResultDto<ProductInListDto>(totalCount, ObjectMapper.Map<List<Product>, List<ProductInListDto>>(data));
         }
+        [Authorize(HieuEcommercePermissions.Product.Update)]
         private async Task SaveThumbnailImageAsync(string fileName, string base64)
         {
             Regex regex = new Regex(@"^[\w/\:.-]+;base64,");
@@ -144,7 +156,7 @@ namespace HieuEcommerce.Admin.Catalog.Products
             byte[] bytes = Convert.FromBase64String(base64);
             await _fileContainer.SaveAsync(fileName, bytes, overrideExisting: true);
         }
-
+        [Authorize(HieuEcommercePermissions.Product.Default)]
         public async Task<string> GetThumbnailImageAsync(string fileName)
         {
             if (string.IsNullOrEmpty(fileName))
@@ -165,7 +177,7 @@ namespace HieuEcommerce.Admin.Catalog.Products
         {
             return await _productCodeGenerator.GenerateAsync();
         }
-
+        [Authorize(HieuEcommercePermissions.Product.Update)]
         public async Task<ProductAttributeValueDto> AddProductAttributeAsync(AddUpdateProductAttributeDto input)
         {
             var product = await Repository.GetAsync(input.ProductId);
@@ -234,7 +246,7 @@ namespace HieuEcommerce.Admin.Catalog.Products
                 TextValue = input.TextValue
             };
         }
-
+        [Authorize(HieuEcommercePermissions.Product.Update)]
         public async Task RemoveProductAttributeAsync(Guid attributeId, Guid id)
         {
             var attribute = await _productAttributeRepository.GetAsync(x => x.Id == attributeId);
@@ -286,7 +298,7 @@ namespace HieuEcommerce.Admin.Catalog.Products
             }
             await UnitOfWorkManager.Current.SaveChangesAsync();
         }
-
+        [Authorize(HieuEcommercePermissions.Product.Default)]
         public async Task<List<ProductAttributeValueDto>> GetListProductAttributeAllAsync(Guid productId)
         {
             var attributeQuery = await _productAttributeRepository.GetQueryableAsync();
@@ -338,6 +350,7 @@ namespace HieuEcommerce.Admin.Catalog.Products
                            || x.VarcharId != null);
             return await AsyncExecuter.ToListAsync(query);
         }
+        [Authorize(HieuEcommercePermissions.Product.Default)]
         public async Task<PagedResultDto<ProductAttributeValueDto>> GetListProductAttributesAsync(ProductAttributeListFilterDto input)
         {
             var attributeQuery = await _productAttributeRepository.GetQueryableAsync();
@@ -395,7 +408,7 @@ namespace HieuEcommerce.Admin.Catalog.Products
                 );
             return new PagedResultDto<ProductAttributeValueDto>(totalCount, data);
         }
-
+        [Authorize(HieuEcommercePermissions.Product.Update)]
         public async Task<ProductAttributeValueDto> UpdateProductAttributeAsync(Guid id, AddUpdateProductAttributeDto input)
         {
             var product = await Repository.GetAsync(input.ProductId);

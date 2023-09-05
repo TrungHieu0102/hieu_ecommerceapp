@@ -1,4 +1,5 @@
-﻿using HieuEcommerce.ProductAttributes;
+﻿using HieuEcommerce.Admin.Permissions;
+using HieuEcommerce.ProductAttributes;
 using Microsoft.AspNetCore.Authorization;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ using Volo.Abp.Domain.Repositories;
 
 namespace HieuEcommerce.Admin.Catalog.ProductAttributes
 {
-    [Authorize]
+    [Authorize(HieuEcommercePermissions.Attribute.Default, Policy = "AdminOnly")]
     public class ProductAttributesAppService : CrudAppService<
        ProductAttribute,
        ProductAttributeDto,
@@ -22,13 +23,21 @@ namespace HieuEcommerce.Admin.Catalog.ProductAttributes
         public ProductAttributesAppService(IRepository<ProductAttribute, Guid> repository)
             : base(repository)
         {
+            GetPolicyName = HieuEcommercePermissions.Attribute.Default;
+            GetListPolicyName = HieuEcommercePermissions.Attribute.Default;
+            CreatePolicyName = HieuEcommercePermissions.Attribute.Create;
+            UpdatePolicyName = HieuEcommercePermissions.Attribute.Update;
+            DeletePolicyName = HieuEcommercePermissions.Attribute.Delete;
         }
 
+        [Authorize(HieuEcommercePermissions.Attribute.Delete)]
         public async Task DeleteMultipleAsync(IEnumerable<Guid> ids)
         {
             await Repository.DeleteManyAsync(ids);
             await UnitOfWorkManager.Current.SaveChangesAsync();
         }
+
+        [Authorize(HieuEcommercePermissions.Attribute.Default)]
 
         public async Task<List<ProductAttributeInListDto>> GetListAllAsync()
         {
@@ -39,6 +48,8 @@ namespace HieuEcommerce.Admin.Catalog.ProductAttributes
             return ObjectMapper.Map<List<ProductAttribute>, List<ProductAttributeInListDto>>(data);
 
         }
+
+        [Authorize(HieuEcommercePermissions.Attribute.Default)]
 
         public async Task<PagedResultDto<ProductAttributeInListDto>> GetListFilterAsync(BaseListFilterDto input)
         {
@@ -52,3 +63,4 @@ namespace HieuEcommerce.Admin.Catalog.ProductAttributes
         }
     }
 }
+

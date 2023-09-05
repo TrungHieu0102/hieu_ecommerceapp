@@ -37,7 +37,7 @@ import { SetPasswordComponent } from './user/set-password.component';
     UserComponent,
     UserDetailComponent,
     RoleAssignComponent,
-    SetPasswordComponent,
+    SetPasswordComponent
   ],
   imports: [
     SharedModule,
@@ -64,4 +64,4 @@ import { SetPasswordComponent } from './user/set-password.component';
     KeyFilterModule,
   ]
 })
-export class SystemModule  {}
+export class SystemModule {}

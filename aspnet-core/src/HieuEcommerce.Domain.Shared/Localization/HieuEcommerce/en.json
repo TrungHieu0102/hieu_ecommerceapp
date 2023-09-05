@@ -10,6 +10,14 @@
     "Permission:Catalog.Attribute": "Thuộc tính",
     "Permission:Catalog.Attribute.Create": "Tạo mới thuộc tính",
     "Permission:Catalog.Attribute.Update": "Cập nhật thuộc tính",
-    "Permission:Catalog.Attribute.Delete": "Xóa thuộc tính"
+    "Permission:Catalog.Attribute.Delete": "Xóa thuộc tính",
+    "Permission:Catalog.Manufaturer": "Nhà sản xuất",
+    "Permission:Catalog.Manufaturer.Create": "Tạo mới nhà sản xuất",
+    "Permission:Catalog.Manufaturer.Update": "Cập nhật nhà sản xuất",
+    "Permission:Catalog.Manufaturer.Delete": "Xóa nhà sản xuất",
+    "Permission:Catalog.ProductCategory": "Loại sản phẩm",
+    "Permission:Catalog.ProductCategory.Create": "Tạo mới loại sản phẩm ",
+    "Permission:Catalog.ProductCategory.Update": "Cập nhật  loại sản phẩmh",
+    "Permission:Catalog.ProductCategory.Delete": "Xóa  loại sản phẩm"
   }
 }
