@@ -1,4 +1,5 @@
-﻿using HieuEcommerce.EntityFrameworkCore;
+﻿using HieuEcommerce.Admin;
+using HieuEcommerce.EntityFrameworkCore;
 using Volo.Abp.Autofac;
 using Volo.Abp.Caching;
 using Volo.Abp.Caching.StackExchangeRedis;
