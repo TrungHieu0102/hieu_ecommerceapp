@@ -14,16 +14,13 @@ using Volo.Abp.Domain.Repositories;
 namespace HieuEcommerce.Public.Products
 
 {
-    public class ProductAppService : CrudAppService<
-       Product,
-       ProductDto,
-       Guid,
-       PagedResultRequestDto>, IProductAppService
+    public class ProductAppService : ReadOnlyAppService<
+        Product,
+        ProductDto,
+        Guid,
+        PagedResultRequestDto>, IProductAppService
     {
-        private readonly ProductManager _productManager;
-        private readonly IRepository<ProductCategory> _productCategoryRepository;
         private readonly IBlobContainer<ProductThumbnailPictureContainer> _fileContainer;
-        private readonly ProductCodeGenerator _productCodeGenerator;
         private readonly IRepository<ProductAttribute> _productAttributeRepository;
         private readonly IRepository<ProductAttributeDateTime> _productAttributeDateTimeRepository;
         private readonly IRepository<ProductAttributeInt> _productAttributeIntRepository;
@@ -31,57 +28,58 @@ namespace HieuEcommerce.Public.Products
         private readonly IRepository<ProductAttributeVarchar> _productAttributeVarcharRepository;
         private readonly IRepository<ProductAttributeText> _productAttributeTextRepository;
 
-        public ProductAppService(IRepository<Product, Guid> repository, ProductManager productManager,
+
+        public ProductAppService(IRepository<Product, Guid> repository,
             IRepository<ProductCategory> productCategoryRepository,
             IBlobContainer<ProductThumbnailPictureContainer> fileContainer,
-            ProductCodeGenerator productCodeGenerator,
             IRepository<ProductAttribute> productAttributeRepository,
             IRepository<ProductAttributeDateTime> productAttributeDateTimeRepository,
               IRepository<ProductAttributeInt> productAttributeIntRepository,
               IRepository<ProductAttributeDecimal> productAttributeDecimalRepository,
               IRepository<ProductAttributeVarchar> productAttributeVarcharRepository,
               IRepository<ProductAttributeText> productAttributeTextRepository
-
-
-            )
+              )
             : base(repository)
         {
-            _productManager = productManager;
-            _productCategoryRepository = productCategoryRepository;
             _fileContainer = fileContainer;
-            _productCodeGenerator = productCodeGenerator;
             _productAttributeRepository = productAttributeRepository;
             _productAttributeDateTimeRepository = productAttributeDateTimeRepository;
             _productAttributeIntRepository = productAttributeIntRepository;
             _productAttributeDecimalRepository = productAttributeDecimalRepository;
             _productAttributeVarcharRepository = productAttributeVarcharRepository;
             _productAttributeTextRepository = productAttributeTextRepository;
-
         }
-
 
         public async Task<List<ProductInListDto>> GetListAllAsync()
         {
             var query = await Repository.GetQueryableAsync();
             query = query.Where(x => x.IsActive == true);
             var data = await AsyncExecuter.ToListAsync(query);
+
             return ObjectMapper.Map<List<Product>, List<ProductInListDto>>(data);
         }
 
-        public async Task<PagedResultDto<ProductInListDto>> GetListFilterAsync(ProductListFilterDto input)
+
+        public async Task<PagedResult<ProductInListDto>> GetListFilterAsync(ProductListFilterDto input)
         {
             var query = await Repository.GetQueryableAsync();
             query = query.WhereIf(!string.IsNullOrWhiteSpace(input.Keyword), x => x.Name.Contains(input.Keyword));
             query = query.WhereIf(input.CategoryId.HasValue, x => x.CategoryId == input.CategoryId);
 
             var totalCount = await AsyncExecuter.LongCountAsync(query);
-            var data = await AsyncExecuter.ToListAsync(
-                query.OrderByDescending(x => x.CreationTime)
-                .Skip(input.SkipCount)
-                .Take(input.MaxResultCount));
+            var data = await AsyncExecuter
+               .ToListAsync(
+                  query.Skip((input.CurrentPage - 1) * input.PageSize)
+               .Take(input.PageSize));
 
-            return new PagedResultDto<ProductInListDto>(totalCount, ObjectMapper.Map<List<Product>, List<ProductInListDto>>(data));
+            return new PagedResult<ProductInListDto>(
+                ObjectMapper.Map<List<Product>, List<ProductInListDto>>(data),
+                totalCount,
+                input.CurrentPage,
+                input.PageSize
+            );
         }
+
 
         public async Task<string> GetThumbnailImageAsync(string fileName)
         {
@@ -98,8 +96,6 @@ namespace HieuEcommerce.Public.Products
             var result = Convert.ToBase64String(thumbnailContent);
             return result;
         }
-
-
 
         public async Task<List<ProductAttributeValueDto>> GetListProductAttributeAllAsync(Guid productId)
         {
@@ -153,7 +149,8 @@ namespace HieuEcommerce.Public.Products
             return await AsyncExecuter.ToListAsync(query);
         }
 
-        public async Task<PagedResultDto<ProductAttributeValueDto>> GetListProductAttributesAsync(ProductAttributeListFilterDto input)
+
+        public async Task<PagedResult<ProductAttributeValueDto>> GetListProductAttributesAsync(ProductAttributeListFilterDto input)
         {
             var attributeQuery = await _productAttributeRepository.GetQueryableAsync();
 
@@ -203,21 +200,26 @@ namespace HieuEcommerce.Public.Products
             || x.TextId != null
             || x.VarcharId != null);
             var totalCount = await AsyncExecuter.LongCountAsync(query);
-            var data = await AsyncExecuter.ToListAsync(
-                query.OrderByDescending(x => x.Label)
-                .Skip(input.SkipCount)
-                .Take(input.MaxResultCount)
-                );
-            return new PagedResultDto<ProductAttributeValueDto>(totalCount, data);
+            var data = await AsyncExecuter
+               .ToListAsync(
+                  query.Skip((input.CurrentPage - 1) * input.PageSize)
+               .Take(input.PageSize));
+
+            return new PagedResult<ProductAttributeValueDto>(data,
+                totalCount,
+                input.CurrentPage,
+                input.PageSize
+            );
         }
 
         public async Task<List<ProductInListDto>> GetListTopSellerAllAsync(int numberOfRecords)
         {
             var query = await Repository.GetQueryableAsync();
             query = query.Where(x => x.IsActive == true)
-                    .OrderByDescending(x => x.CreationTime)
-                    .Take(numberOfRecords);
+                .OrderByDescending(x => x.CreationTime)
+                .Take(numberOfRecords);
             var data = await AsyncExecuter.ToListAsync(query);
+
             return ObjectMapper.Map<List<Product>, List<ProductInListDto>>(data);
         }
     }

@@ -8,13 +8,13 @@ using Volo.Abp.Application.Services;
 namespace HieuEcommerce.Public.ProductCategories
 {
     public interface IProductCategoriesAppService : IReadOnlyAppService
-      <ProductCategoryDto,
-      Guid,
-      PagedResultRequestDto
-     >
+        <ProductCategoryDto,
+        Guid,
+        PagedResultRequestDto>
     {
-        Task<PagedResultDto<ProductCategoryInListDto>> GetListFilterAsync(BaseListFilterDto input);
+        Task<PagedResult<ProductCategoryInListDto>> GetListFilterAsync(BaseListFilterDto input);
         Task<List<ProductCategoryInListDto>> GetListAllAsync();
-       
+        Task<ProductCategoryDto> GetByCodeAsync(string code);
+
     }
 }
