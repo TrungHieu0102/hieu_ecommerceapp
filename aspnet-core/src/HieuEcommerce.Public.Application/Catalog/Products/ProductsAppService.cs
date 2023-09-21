@@ -56,10 +56,10 @@ namespace HieuEcommerce.Public.Products
             _productAttributeDecimalRepository = productAttributeDecimalRepository;
             _productAttributeVarcharRepository = productAttributeVarcharRepository;
             _productAttributeTextRepository = productAttributeTextRepository;
-           
+
         }
-       
-      
+
+
         public async Task<List<ProductInListDto>> GetListAllAsync()
         {
             var query = await Repository.GetQueryableAsync();
@@ -67,7 +67,7 @@ namespace HieuEcommerce.Public.Products
             var data = await AsyncExecuter.ToListAsync(query);
             return ObjectMapper.Map<List<Product>, List<ProductInListDto>>(data);
         }
-       
+
         public async Task<PagedResultDto<ProductInListDto>> GetListFilterAsync(ProductListFilterDto input)
         {
             var query = await Repository.GetQueryableAsync();
@@ -82,7 +82,7 @@ namespace HieuEcommerce.Public.Products
 
             return new PagedResultDto<ProductInListDto>(totalCount, ObjectMapper.Map<List<Product>, List<ProductInListDto>>(data));
         }
-      
+
         public async Task<string> GetThumbnailImageAsync(string fileName)
         {
             if (string.IsNullOrEmpty(fileName))
@@ -99,8 +99,8 @@ namespace HieuEcommerce.Public.Products
             return result;
         }
 
-    
-       
+
+
         public async Task<List<ProductAttributeValueDto>> GetListProductAttributeAllAsync(Guid productId)
         {
             var attributeQuery = await _productAttributeRepository.GetQueryableAsync();
@@ -152,7 +152,7 @@ namespace HieuEcommerce.Public.Products
                            || x.VarcharId != null);
             return await AsyncExecuter.ToListAsync(query);
         }
-        
+
         public async Task<PagedResultDto<ProductAttributeValueDto>> GetListProductAttributesAsync(ProductAttributeListFilterDto input)
         {
             var attributeQuery = await _productAttributeRepository.GetQueryableAsync();
@@ -210,7 +210,16 @@ namespace HieuEcommerce.Public.Products
                 );
             return new PagedResultDto<ProductAttributeValueDto>(totalCount, data);
         }
-       
+
+        public async Task<List<ProductInListDto>> GetListTopSellerAllAsync(int numberOfRecords)
+        {
+            var query = await Repository.GetQueryableAsync();
+            query = query.Where(x => x.IsActive == true)
+                    .OrderByDescending(x => x.CreationTime)
+                    .Take(numberOfRecords);
+            var data = await AsyncExecuter.ToListAsync(query);
+            return ObjectMapper.Map<List<Product>, List<ProductInListDto>>(data);
+        }
     }
 }
 

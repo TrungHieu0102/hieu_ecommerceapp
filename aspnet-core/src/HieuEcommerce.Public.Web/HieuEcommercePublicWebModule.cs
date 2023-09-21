@@ -30,6 +30,7 @@ using Volo.Abp.VirtualFileSystem;
 using HieuEcommerce.Localization;
 using HieuEcommerce.MultiTenancy;
 using HieuEcommerce.EntityFrameworkCore;
+using Volo.Abp.Caching.StackExchangeRedis;
 
 namespace HieuEcommerce.Public.Web;
 
@@ -38,6 +39,7 @@ namespace HieuEcommerce.Public.Web;
     typeof(HieuEcommercePublicApplicationModule),
     typeof(HieuEcommerceEntityFrameworkCoreModule),
     typeof(AbpAutofacModule),
+    typeof(AbpCachingStackExchangeRedisModule),
     typeof(AbpIdentityWebModule),
     typeof(AbpSettingManagementWebModule),
     typeof(AbpAccountWebOpenIddictModule),

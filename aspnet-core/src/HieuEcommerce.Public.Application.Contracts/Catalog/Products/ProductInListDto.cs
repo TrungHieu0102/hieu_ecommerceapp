@@ -1,7 +1,5 @@
 ﻿using HieuEcommerce.Products;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using Volo.Abp.Application.Dtos;
 
 namespace HieuEcommerce.Public.Products
@@ -20,6 +18,7 @@ namespace HieuEcommerce.Public.Products
         public Guid CategoryId { get; set; }
         public string ThumbnailPicture { get; set; }
         public string CategoryName { get; set; }
+        public double sellPrice { get; set; }
         public string CategorySlug { get; set; }
     }
 }

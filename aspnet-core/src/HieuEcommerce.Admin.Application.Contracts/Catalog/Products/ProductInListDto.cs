@@ -19,6 +19,7 @@ namespace HieuEcommerce.Admin.Catalog.Products
         public bool IsActive { get; set; }
         public Guid CategoryId { get; set; }
         public string ThumbnailPicture { get; set; }
+
         public string CategoryName { get; set; }
         public string CategorySlug { get; set; }
     }

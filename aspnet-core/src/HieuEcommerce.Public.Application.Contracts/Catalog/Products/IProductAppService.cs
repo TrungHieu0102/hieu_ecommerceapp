@@ -17,5 +17,6 @@ namespace HieuEcommerce.Public.Products
         Task<string> GetThumbnailImageAsync(string fileName);
         Task<List<ProductAttributeValueDto>> GetListProductAttributeAllAsync(Guid productId);
         Task<PagedResultDto<ProductAttributeValueDto>> GetListProductAttributesAsync(ProductAttributeListFilterDto input);
+        Task<List<ProductInListDto>> GetListTopSellerAllAsync(int numberOfRecords); 
     }
 }

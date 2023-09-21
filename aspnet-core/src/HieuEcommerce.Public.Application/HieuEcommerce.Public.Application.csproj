@@ -4,7 +4,7 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-    <Nullable>enable</Nullable>
+   
     <RootNamespace>HieuEcommerce.Public</RootNamespace>
   </PropertyGroup>
 
@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <PackageReference Include="Volo.Abp.Account.Application" Version="7.3.2" />
+    <PackageReference Include="Volo.Abp.BlobStoring.FileSystem" Version="7.3.2" />
     <PackageReference Include="Volo.Abp.Identity.Application" Version="7.3.2" />
     <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="7.3.2" />
     <PackageReference Include="Volo.Abp.TenantManagement.Application" Version="7.3.2" />
