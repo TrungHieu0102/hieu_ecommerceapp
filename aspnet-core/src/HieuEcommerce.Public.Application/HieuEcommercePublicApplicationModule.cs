@@ -35,9 +35,9 @@ namespace HieuEcommerce.Public;
         {
             options.Containers.ConfigureDefault(container =>
             {
-                container.UseFileSystem(filSystem =>
+                container.UseFileSystem(fileSystem =>
                 {
-                    filSystem.BasePath = "D:\\Image\\hieuEcommerce\\host\\product-thumbnail-pictures";
+                    fileSystem.BasePath = "D:\\Image\\hieuEcommerce";
                 });
             });
         });
