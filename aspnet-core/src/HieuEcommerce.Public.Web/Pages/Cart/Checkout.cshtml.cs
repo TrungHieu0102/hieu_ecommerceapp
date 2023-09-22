@@ -1,3 +1,5 @@
+﻿
+using HieuEcommerce.Emailing;
 using HieuEcommerce.Public.Orders;
 using HieuEcommerce.Public.Web.Extensions;
 using HieuEcommerce.Public.Web.Models;
@@ -6,17 +8,24 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Volo.Abp.Emailing;
 using System.Text.Json;
 using System.Threading.Tasks;
+using Volo.Abp.TextTemplating;
 
 namespace HieuEcommerce.Public.Web.Pages.Cart
 {
     public class CheckoutModel : PageModel
     {
         private readonly IOrdersAppService _ordersAppService;
-        public CheckoutModel(IOrdersAppService ordersAppService)
+        private readonly IEmailSender _emailSender;
+        private readonly ITemplateRenderer _templateRenderer;
+        public CheckoutModel(IOrdersAppService ordersAppService, IEmailSender emailSender,
+            ITemplateRenderer templateRenderer)
         {
             _ordersAppService = ordersAppService;
+            _emailSender = emailSender;
+            _templateRenderer = templateRenderer;
         }
         public List<CartItem> CartItems { get; set; }
 
@@ -56,7 +65,22 @@ namespace HieuEcommerce.Public.Web.Pages.Cart
             CartItems = GetCartItems();
 
             if (order != null)
+            {
+                if (User.Identity.IsAuthenticated)
+                {
+                    var email = "trunghieu010202@gmail.com";
+                    var emailBody = await _templateRenderer.RenderAsync(
+                        EmailTemplates.CreateOrderEmail,
+                        new
+                        {
+                            message = "Create order success"
+                        });
+                    await _emailSender.SendAsync(email, "Tạo đơn hàng thành công", emailBody);
+                }
+
                 CreateStatus = true;
+            }
+
             else
                 CreateStatus = false;
         }
@@ -71,5 +95,6 @@ namespace HieuEcommerce.Public.Web.Pages.Cart
             }
             return productCarts.Values.ToList();
         }
+
     }
 }
